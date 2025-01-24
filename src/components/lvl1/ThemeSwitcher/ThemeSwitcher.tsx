@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { IoSunnySharp, IoMoon } from "react-icons/io5";
-import { useLightMode } from "hooks/useTheme";
-import styles from "styles/themeSwitcher.module.css";
+import { useLightMode } from "@/hooks/useTheme";
+import styles from "./themeSwitcher.module.css";
 
 export const ThemeSwitcher = () => {
   const { setTheme } = useTheme();

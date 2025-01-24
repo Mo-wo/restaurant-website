@@ -1,14 +1,12 @@
-import { useEffect } from "react";
-import type { Metadata } from "next";
-import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import { Navbar } from "@/components/lvl2/Navbar/Navbar";
-import { BackToTop } from "@/components/lvl1/BackToTop";
-import { ThemeSwitcher } from "@/components/lvl1/ThemeSwitcher";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { app_text } from "@/constants/constants";
-import Head from "next/head";
+import type { Metadata } from 'next';
+import './globals.css';
+import { ThemeProvider } from 'next-themes';
+import { Navbar } from '@/components/lvl2/Navbar/Navbar';
+import { BackToTop } from '@/components/lvl1/BackToTop/BackToTop';
+import { ThemeSwitcher } from '@/components/lvl1/ThemeSwitcher/ThemeSwitcher';
+import { app_text } from '@/constants/constants';
+import Head from 'next/head';
+import AOSInitializer from './AOSInitialiser';
 
 export const metadata: Metadata = {
   title: app_text.name,
@@ -17,47 +15,46 @@ export const metadata: Metadata = {
   authors: [{ name: app_text.author, url: app_text.url }],
   keywords: app_text.globalKeywords,
   alternates: { canonical: app_text.url },
-  generator: "Next.js",
-  robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
-  referrer: "origin",
+  generator: 'Next.js',
+  robots: 'index, follow',
+  referrer: 'origin',
   creator: app_text.creator,
   openGraph: {
-    type: "website",
+    type: 'website',
     url: app_text.url,
     title: app_text.name,
     description: app_text.description,
     siteName: app_text.name,
     images: [
       {
-        url: "",
+        url: '',
       },
     ],
   },
 };
+
+export const viewport = 'width=device-width, initial-scale=1.0';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    AOS.init();
-  });
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning>
       <Head>
+        <meta name='viewport' content={viewport} />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": app_text.type,
+              '@context': 'https://schema.org',
+              '@type': app_text.type,
               name: app_text.name,
               url: app_text.url,
               address: {
-                "@type": "PostalAddress",
+                '@type': 'PostalAddress',
                 streetAddress: app_text.street_address,
                 addressLocality: app_text.addressLocality,
                 postalCode: app_text.postalCode,
@@ -70,11 +67,12 @@ export default function RootLayout({
         />
       </Head>
       <body>
-        <ThemeProvider defaultTheme="dark">
+        <ThemeProvider defaultTheme='light'>
+          <AOSInitializer />
           <Navbar />
           {children}
-          <BackToTop />
-          <ThemeSwitcher />
+          {/* <BackToTop /> */}
+          {/* <ThemeSwitcher /> */}
         </ThemeProvider>
       </body>
     </html>

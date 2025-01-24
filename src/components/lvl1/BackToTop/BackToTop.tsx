@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
-import styles from "styles/backToTop.module.css";
+import styles from "./backToTop.module.css";
 import { BiUpArrowAlt } from "react-icons/bi";
 
 export const BackToTop = () => {
@@ -16,15 +16,15 @@ export const BackToTop = () => {
     });
   }, []);
 
-  
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", 
+      behavior: "smooth",
     });
   };
-  
-  
+
+
   return (
   <>
     { showButton && (
@@ -36,4 +36,3 @@ export const BackToTop = () => {
   </>
   );
 };
-
