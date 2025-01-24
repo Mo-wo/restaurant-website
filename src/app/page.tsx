@@ -1,7 +1,11 @@
+'use client';
 import Image from "next/image";
 import styles from "./page.module.css";
+import useAOS from "@/hooks/useAOS";
 
 export default function Home() {
+  useAOS();
+  
   return (
     <div className={styles.page}>
       <main className={styles.main}>
