@@ -1,4 +1,6 @@
+import { app_text } from "@/constants/constants";
+
 module.exports = {
-    siteUrl: "https://restaurant-website-tinker-devs.vercel.app/",
+    siteUrl: app_text.url,
     generateRobotsTxt: true,
   };

@@ -1,0 +1,10 @@
+This is a list of things to customise within the app;
+
+Customising To-dos:
+1. Update constants file,
+
+
+To-dos:
+1. Add icons to layout metadata
+2. Add manifest to layout metadata
+3. Add image urls to layout metadata
