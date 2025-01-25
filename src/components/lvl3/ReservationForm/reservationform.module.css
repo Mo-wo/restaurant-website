@@ -28,7 +28,6 @@
   align-items: flex-end;
   justify-content: flex-end;
   gap: var(--spacing-small);
-  /* margin-top: var(--spacing-medium); */
 }
 
 .formInputWrapper {
@@ -52,7 +51,8 @@
   margin-top: var(--spacing-small);
   background-color: var(--color-heading-text);
   border: none;
-  outline: none
+  outline: none;
+  color:  var(--color-primary)
 }
 
 .formBtn{

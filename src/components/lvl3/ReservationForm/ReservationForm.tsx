@@ -21,7 +21,7 @@ export const ReservationForm = () => {
 
         <div role='complementary' className={styles.formInputWrapper}>
           <label className={styles.label} htmlFor='contact'>Contact</label>
-          <input className={styles.input} type='text' id='contact' name='contact'  />
+          <input className={styles.input} type='tel' id='contact' name='contact'  />
         </div>
 
         <div role='complementary' className={styles.formInputWrapper}>

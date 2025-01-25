@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  min-height: 90vh;
+  min-height: auto;
   display: flex;
   padding: 100px 10px;
 }
@@ -27,6 +27,10 @@
   color: var(--color-primary);
 }
 
+.contentContainer {
+  width: 100%;
+  display: flex;
+}
 
 
 
