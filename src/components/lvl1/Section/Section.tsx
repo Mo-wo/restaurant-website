@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import styles from "styles/section.module.css";
+import styles from "./section.module.css";
 
 type Props = {
   children: React.ReactNode;

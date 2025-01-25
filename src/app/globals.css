@@ -20,8 +20,8 @@
 
   /* font-sizes */
   --text-xl: 3.2rem;
-  --text-large: 3rem;
-  --text-semi-large: 2.5rem;
+  --text-large: 2.5rem;
+  --text-semi-large: 2rem;
   --text-medium: 1.5rem;
   --text-regular: 1rem;
   --text-small: 0.8rem;
@@ -32,6 +32,8 @@
   --line-height-regular: 15px;
 
   /* spacing */
+  --spacing-xxxl: 50px;
+  --spacing-xxl: 40px;
   --spacing-xl: 32px;
   --spacing-large: 24px;
   --spacing-medium: 16px;
@@ -90,14 +92,12 @@ body {
 .main {
   padding-top: 100px;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading-text);
   line-height: var(--line-height-large);
 }
 
-h1, h2 {
-  font-weight: var(--weight-medium);
-}
 
 h3, h4, h5, h6 {
   font-weight: var(--weight-semi-bold);
@@ -105,11 +105,19 @@ h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--text-semi-large);
+  line-height: var(--line-height-xl);
+  font-weight: var(--weight-semi-bold);
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: var(--text-medium);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+}
 
+p {
+  line-height: var(--line-height-medium);
 }
 
 input, button {
@@ -149,6 +157,10 @@ button {
   text-align: center;
 }
 
+button a {
+  color: var(--color-primary);
+}
+
 
 ::-webkit-scrollbar {
   width: 3px;
@@ -185,7 +197,7 @@ button {
 
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: var(--text-xl);
+    font-size: var(--text-large);
   }
 
   h2 {

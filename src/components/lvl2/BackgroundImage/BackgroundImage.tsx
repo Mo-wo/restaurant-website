@@ -18,7 +18,9 @@ export const BackgroundImage: React.FC<BackgroundImageProps> = ({ src, alt, styl
         priority={true}
         className={imgStyle}
       />
-      {children}
+      <div className={styles.contentWrapper}>
+        {children}
+      </div>
     </div>
   );
 };
