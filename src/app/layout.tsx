@@ -68,11 +68,11 @@ export default function RootLayout({
         />
       </Head>
       <body>
-        <ThemeProvider defaultTheme='light'>
+        <ThemeProvider defaultTheme='light' attribute='class'>
           <AOSInitializer />
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
           {/* <BackToTop /> */}
           {/* <ThemeSwitcher /> */}
         </ThemeProvider>

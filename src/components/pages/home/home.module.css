@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  width: 50%;
+  /* min-height: 100vh; */
+  border: var(--test-border);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 200px;
+}
