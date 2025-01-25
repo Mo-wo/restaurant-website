@@ -60,8 +60,6 @@
 @media screen and (min-width: 800px) {
   .cardContainer {
     justify-content: space-between;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
     row-gap: 100px;
   }
 
@@ -72,21 +70,20 @@
 
   .cardWrapperMenu:nth-child(1) {
     height: 241px;
-    justify-content: flex-end;
-    align-self: flex-end;
+    justify-content: flex-start;
+    align-self: flex-start;
     margin-bottom: 0;
   }
 
   .cardImageWrapperMenu {
     max-width: 300px;
-
   }
 
   .cardWrapperMenu:nth-child(1) h2 {
     width: 200px;
-    text-align: right;
+    text-align: left;
     margin-bottom: var(--spacing-xl);
-    align-self: flex-end;
+    align-self: flex-start;
   }
 
   .cardTextWrapperMenu {
@@ -94,21 +91,21 @@
     padding: 0;
     max-width: 300px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .cardBtnMenu {
     width: 100%;
     max-width: 300px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .cardBtnMenu button {
     width: var(--button-width-desktop);
-    align-self: flex-end;
+    align-self: flex-start;
   }
 }
 
@@ -118,6 +115,6 @@
   }
 
   .cardWrapperMenu:nth-child(1) {
-    height: 300px;
+    /* height: 300px; */
   }
 }

@@ -1,22 +1,22 @@
 import { Section } from '@/components/lvl1/Section/Section';
 import styles from './interiorPreview.module.css';
 import { ItemCard } from '@/components/lvl3/ItemCard/ItemCard';
-import menuitemone from '@/assets/images/menuItems/menuitemone.svg';
-import menuitemtwo from '@/assets/images/menuItems/menuitemtwo.svg';
-import menuitemthree from '@/assets/images/menuItems/menuitemthree.svg';
-import menuitemfour from '@/assets/images/menuItems/menuitemfour.svg';
-import menuitemfive from '@/assets/images/menuItems/menuitemfive.svg';
+import interiorimageone from '@/assets/images/interior/interiorimageone.svg';
+import interiorimagetwo from '@/assets/images/interior/interiorimagetwo.svg';
+import interiorimagethree from '@/assets/images/interior/interiorimagethree.svg';
+import interiorimagefour from '@/assets/images/interior/interiorimagefour.svg';
+import interiorimagefive from '@/assets/images/interior/interiorimagefive.svg';
 
 
 
 export const InteriorPreview = () => {
   return (
-    <Section sectionStyle={styles.bestSellerSection} color={'black'}>
+    <Section sectionStyle={styles.bestSellerSection} color={'white'}>
       <div className={styles.cardContainer}>
       <ItemCard
           cardStyle={styles.cardWrapperMenu}
           heading={true}
-          cardHeading={'A glimpse of our world'}
+          cardHeading={'Step into our world'}
           showBtn={true}
           btnPath={'/gallery'}
           btnText={'More Pictures'}
@@ -26,31 +26,31 @@ export const InteriorPreview = () => {
         <ItemCard
           cardStyle={styles.cardWrapperMenu}
           cardImgWrapperStyle={styles.cardImageWrapperMenu}
-          cardImgSrc={menuitemone}
+          cardImgSrc={interiorimageone}
           cardImgStyle={styles.cardImgStyle}
         />
         <ItemCard
           cardStyle={styles.cardWrapperMenu}
           cardImgWrapperStyle={styles.cardImageWrapperMenu}
-          cardImgSrc={menuitemtwo}
+          cardImgSrc={interiorimagetwo}
           cardImgStyle={styles.cardImgStyle}
         />
         <ItemCard
           cardStyle={styles.cardWrapperMenu}
           cardImgWrapperStyle={styles.cardImageWrapperMenu}
-          cardImgSrc={menuitemthree}
+          cardImgSrc={interiorimagethree}
           cardImgStyle={styles.cardImgStyle}
         />
         <ItemCard
           cardStyle={styles.cardWrapperMenu}
           cardImgWrapperStyle={styles.cardImageWrapperMenu}
-          cardImgSrc={menuitemfour}
+          cardImgSrc={interiorimagefour}
           cardImgStyle={styles.cardImgStyle}
         />
         <ItemCard
           cardStyle={styles.cardWrapperMenu}
           cardImgWrapperStyle={styles.cardImageWrapperMenu}
-          cardImgSrc={menuitemfive}
+          cardImgSrc={interiorimagefive}
           cardImgStyle={styles.cardImgStyle}
         />
       </div>
