@@ -1,12 +1,11 @@
 .cardWrapper {
   width: 100%;
-  max-width: 300px;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: var(--test-border);
+  margin: var(--spacing-xl) 0;
 }
 
 .imgWrapper {

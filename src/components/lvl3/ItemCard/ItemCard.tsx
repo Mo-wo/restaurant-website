@@ -1,24 +1,24 @@
-import styles from './menuDescCard.module.css';
+import styles from './itemCard.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-interface MenuDescCardProps {
-  cardStyle: string;
-  cardImgWrapperStyle: string;
-  cardImgSrc: string;
-  cardHeading: string;
-  cardInfo: string;
+interface ItemCardProps {
+  cardStyle?: string;
+  cardImgWrapperStyle?: string;
+  cardImgSrc?: string | '';
+  cardHeading?: string | '';
+  cardInfo?: string;
   btnText?: string;
 }
 
-export const MenuDescCard: React.FC<MenuDescCardProps> = ({
+export const ItemCard: React.FC<ItemCardProps> = ({
   cardStyle, cardImgWrapperStyle, cardImgSrc, cardHeading, cardInfo, btnText
 }) => {
   return (
-    <div role='complementary' className={`${styles.cardWrapper} ${cardStyle}`}>
+    <div role='complementary' className={`${styles.cardWrapper} ${cardStyle}`} data-aos='zoom-in-up' data-aos-offse='50'>
       <div className={`${styles.imgWrapper} ${cardImgWrapperStyle}`}>
-        <Image src={cardImgSrc} alt={cardHeading} className={styles.img} />
+        <Image src={cardImgSrc ? cardImgSrc : ''} alt={cardHeading ? cardHeading : ''} className={styles.img} />
       </div>
       <div role='complementary' className={styles.cardTextWrapper}>
         <h3 className={styles.cardHeading}>{cardHeading}</h3>

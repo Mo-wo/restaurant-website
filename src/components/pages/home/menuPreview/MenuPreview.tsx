@@ -1,14 +1,13 @@
 import { Section } from '@/components/lvl1/Section/Section';
-import styles from './bestSeller.module.css';
+import styles from './menuPreview.module.css';
 import { ItemCard } from '@/components/lvl3/ItemCard/ItemCard';
 import bestsellerimageone from '@/assets/images/menuItems/bestsellerimageone.svg';
 import bestsellerimagetwo from '@/assets/images/menuItems/bestsellerimagetwo.svg';
 import bestsellerimagethree from '@/assets/images/menuItems/bestsellerimagethree.svg';
 
-export const BestSeller = () => {
+export const MenuPreview = () => {
   return (
-    <Section sectionStyle={styles.bestSellerSection} color={'white'}>
-      <h2 data-aos='fade-down'>A taste of our best</h2>
+    <Section sectionStyle={styles.bestSellerSection} color={'black'}>
       <div className={styles.cardContainer}>
         <ItemCard
           cardStyle={styles.cardWrapper}
