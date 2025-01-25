@@ -1,0 +1,37 @@
+.cardWrapper {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--test-border);
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.cardTextWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.cardHeading {
+  text-align: center;
+}
+
+.cardInfoText {
+  text-align: center;
+}

@@ -145,7 +145,7 @@ button {
   border-radius: var(--border-radius);
   font-size: var(--text-regular);
   background-color: var(--color-tertiary);
-  width: var(--button-width-mobile);
+  width: var(--button-width-desktop);
   color: var(--color-white);
   font-weight: var(--weight-semi-bold);
   border: none;
@@ -208,6 +208,6 @@ button a {
 
 @media screen and (min-width: 850px) {
   button {
-    width: var(--button-width-desktop);
+    /* width: var(--button-width-desktop); */
   }
 }
