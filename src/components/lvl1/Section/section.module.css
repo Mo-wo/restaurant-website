@@ -1,0 +1,48 @@
+.section {
+  display: flex;
+  padding: 0 10px;
+}
+
+.black {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.black h2, .black a {
+  color: var(--color-primary);
+}
+
+.white {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.white h2 {
+  color: var(--color-heading-text);
+}
+
+.white button a {
+  color: var(--color-primary);
+}
+
+
+
+
+@media screen and (min-width: 375px) {
+  .section {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .section {
+    padding: 20px 50px;
+  }
+  .contentContainer {
+    max-width: 1400px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .section {
+    padding: 20px 100px;
+  }
+}

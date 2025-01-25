@@ -6,6 +6,7 @@
   bottom: 0;
   background-color: var(--color-secondary);
   color: var(--color-white);
+  margin-top: var(--spacing-xl);
 }
 
 .footerTop {

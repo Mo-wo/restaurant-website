@@ -5,7 +5,6 @@ import Image from 'next/image';
 import logo from '@/assets/images/logo.svg';
 import styles from './navbar.module.css';
 import Link from 'next/link';
-import { useLightMode } from '@/hooks/useTheme';
 import { app_text } from '@/constants/constants';
 
 
@@ -14,9 +13,7 @@ export const Navbar = () => {
   const isActive = (path: string) => pathname === path;
 
   const [ closeNav, setCloseNav ] = useState<boolean>(false);
-  const light = useLightMode();
 
-  const lineColor = light ? styles.darkLine : styles.whiteLine;
 
   const handleNavClose = () => {
     setCloseNav(!closeNav);
@@ -51,26 +48,6 @@ export const Navbar = () => {
             )}
           </React.Fragment>
         ))}
-      {/* <li className={isActive('/') ? styles.active : styles.li} onClick={handleNavClose}>
-          <Link href='/'>Home</Link>
-        </li>
-      <li className={isActive('/menu') ? styles.active : styles.li} onClick={handleNavClose}>
-          <Link href='/menu'>Menu</Link>
-        </li>
-        <li className={isActive('/gallery') ? styles.active : styles.li} onClick={handleNavClose}>
-          <Link href='/gallery'>Gallery</Link>
-        </li>
-        <li className={isActive('/about-us') ? styles.active : styles.li} onClick={handleNavClose}>
-          <Link href='about-us'>About us</Link>
-        </li>
-        <li className={isActive('/contact') ? styles.active : styles.li} onClick={handleNavClose}>
-          <Link href='contact'>Contact</Link>
-        </li>
-        <li className={`${isActive(pathname) ? styles.active : styles.li} ${styles.resumeWrapper}`} onClick={handleNavClose}>
-          <button>
-          <Link href='https://docs.google.com/document/d/1nPvYHClUmQ2rgR9_vbVKQx7HTQAWCiBzRcN37wEHVKU/edit?usp=sharing' passHref legacyBehavior><a target='_blank' className={styles.resume}>Resume</a></Link>
-          </button>
-          </li> */}
       </ul>
 
       <button className={styles.deskTopButton}>

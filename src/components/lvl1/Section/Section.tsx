@@ -4,15 +4,14 @@ import styles from "styles/section.module.css";
 type Props = {
   children: React.ReactNode;
   sectionStyle?: any;
-  sectionHeading?: React.ReactNode;
+  color: string;
 } & HTMLAttributes<HTMLDivElement>;
 
-export const Section:React.FC<Props> = ({ sectionStyle, sectionHeading, children, ...props}) => {
+export const Section:React.FC<Props> = ({ sectionStyle, children, color, ...props}) => {
 
   return (
-    <section className={`${sectionStyle} ${styles.section}`} {...props}>
+    <section className={`${styles.section} ${sectionStyle} ${styles[color]}`} {...props}>
       <div className={styles.contentWrapper}>
-        {sectionHeading}
         {children}
       </div>
     </section>

@@ -71,7 +71,9 @@ export default function RootLayout({
         <ThemeProvider defaultTheme='light' attribute='class'>
           <AOSInitializer />
           <Navbar />
-          {children}
+          <main className="main">
+            {children}
+          </main>
           <Footer />
           {/* <BackToTop /> */}
           {/* <ThemeSwitcher /> */}

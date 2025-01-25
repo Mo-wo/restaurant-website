@@ -1,5 +1,9 @@
-import HomeTemplate from "@/components/pages/home/Home";
+import Hero from "@/components/pages/home/hero/Hero";
 
 export default function Home() {
-  return <HomeTemplate />;
+  return(
+    <>
+      <Hero />
+    </>
+  );
 }
