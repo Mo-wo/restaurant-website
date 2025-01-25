@@ -42,7 +42,7 @@ export const Navbar = () => {
           <React.Fragment key={item.id}>
             {item.path === '/reservation' ? (
               <button className={`${styles.reservation} ${styles.mobileButton}`}>
-                <Link href='https://docs.google.com/document/d/1nPvYHClUmQ2rgR9_vbVKQx7HTQAWCiBzRcN37wEHVKU/edit?usp=sharing' passHref legacyBehavior><a target='_blank' >{item.name}</a></Link>
+                <Link href='https://docs.google.com/document/d/1nPvYHClUmQ2rgR9_vbVKQx7HTQAWCiBzRcN37wEHVKU/edit?usp=sharing' passHref legacyBehavior><a target='_blank'>{item.name}</a></Link>
               </button>
             ) : (
               <li key={item.id} className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
