@@ -7,6 +7,7 @@ import { ThemeSwitcher } from '@/components/lvl1/ThemeSwitcher/ThemeSwitcher';
 import { app_text } from '@/constants/constants';
 import Head from 'next/head';
 import AOSInitializer from './AOSInitialiser';
+import Footer from '@/components/lvl2/Footer/Footer';
 
 export const metadata: Metadata = {
   title: app_text.name,
@@ -71,6 +72,7 @@ export default function RootLayout({
           <AOSInitializer />
           <Navbar />
           {children}
+          <Footer />
           {/* <BackToTop /> */}
           {/* <ThemeSwitcher /> */}
         </ThemeProvider>

@@ -65,6 +65,9 @@
 .li:hover, .active:hover {
   border-bottom: 2px solid var(--color-tertiary);
 }
+.mobileButton {
+  margin: 20px;
+}
 .deskTopButton {
   display: none;
 }

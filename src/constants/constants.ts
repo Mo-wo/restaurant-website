@@ -12,7 +12,7 @@ export const app_text = {
     postalCode: "101241",
     country: "Nigeria",
     phone: "+234 0908765432",
-    email: 'customisablerestaurantwebsite@restaurant.com',
+    email: 'restaurantwebsite@restaurant.com',
     globalKeywords: ["Restaurant, Fine Dining, Reservations, Menu, Delicious, Tasty Meals, Appetisers, Main course, Deserts, Drinks"],
     creator: 'Tinker Devs',
     cuisine: 'Nigerian, Continental',
