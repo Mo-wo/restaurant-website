@@ -1,5 +1,5 @@
 import { Section } from '@/components/lvl1/Section/Section';
-import styles from './menuPreview.module.css';
+import styles from './interiorPreview.module.css';
 import { ItemCard } from '@/components/lvl3/ItemCard/ItemCard';
 import menuitemone from '@/assets/images/menuItems/menuitemone.svg';
 import menuitemtwo from '@/assets/images/menuItems/menuitemtwo.svg';
@@ -9,7 +9,7 @@ import menuitemfive from '@/assets/images/menuItems/menuitemfive.svg';
 
 
 
-export const MenuPreview = () => {
+export const InteriorPreview = () => {
   return (
     <Section sectionStyle={styles.bestSellerSection} color={'black'}>
       <div className={styles.cardContainer}>

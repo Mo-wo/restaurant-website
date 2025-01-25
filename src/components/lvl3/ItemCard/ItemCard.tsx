@@ -6,28 +6,44 @@ import React from 'react';
 interface ItemCardProps {
   cardStyle?: string;
   cardImgWrapperStyle?: string;
-  cardImgSrc?: string | '';
-  cardHeading?: string | '';
+  cardImgSrc?: string;
+  cardImgStyle?: string;
+  cardTextWrapperStyle?: string;
+  heading?: boolean;
+  cardHeading?: string;
   cardInfo?: string;
+  showBtn?: boolean;
+  btnStyle?: string;
+  btnPath?: string;
   btnText?: string;
 }
 
 export const ItemCard: React.FC<ItemCardProps> = ({
-  cardStyle, cardImgWrapperStyle, cardImgSrc, cardHeading, cardInfo, btnText
+  cardStyle, cardImgWrapperStyle, cardImgSrc, cardImgStyle, cardTextWrapperStyle, cardHeading, cardInfo, btnStyle, btnPath, btnText, showBtn, heading
 }) => {
+  console.log(cardImgStyle)
   return (
-    <div role='complementary' className={`${styles.cardWrapper} ${cardStyle}`} data-aos='zoom-in-up' data-aos-offse='50'>
-      <div className={`${styles.imgWrapper} ${cardImgWrapperStyle}`}>
-        <Image src={cardImgSrc ? cardImgSrc : ''} alt={cardHeading ? cardHeading : ''} className={styles.img} />
-      </div>
-      <div role='complementary' className={styles.cardTextWrapper}>
-        <h3 className={styles.cardHeading}>{cardHeading}</h3>
-        <p className={styles.cardInfoText}>{cardInfo}</p>
-      </div>
+    <div role='complementary' className={`${styles.cardWrapper} ${cardStyle}`} data-aos='zoom-in-up' data-aos-offset='50'>
+      {cardImgSrc &&
+        <div className={`${styles.imgWrapper} ${cardImgWrapperStyle}`}>
+          <Image src={cardImgSrc} alt={cardHeading ?? ''} className={`${styles.img} ${cardImgStyle}`} />
+        </div>
+      }
+      {cardHeading && <div role='complementary' className={`${styles.cardTextWrapper} ${cardTextWrapperStyle}`}>
+        {heading ? (
+          <h2 className={styles.cardHeading}>{cardHeading}</h2>
+        ) : (
+          <h3 className={styles.cardHeading}>{cardHeading}</h3>
+        )}
+        {cardInfo && <p className={styles.cardInfoText}>{cardInfo}</p>}
+      </div>}
 
-      <button className={styles.btn}>
-         <Link href='/menu' passHref legacyBehavior><a target='_blank'>View Details</a></Link>
+      {showBtn && <div className={btnStyle}>
+        <button className={styles.btn}>
+          <Link href={btnPath ?? '/menu'} passHref legacyBehavior><a>{btnText ?? 'View Details'}</a></Link>
         </button>
+      </div>}
+
     </div>
   )
 }

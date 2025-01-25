@@ -8,3 +8,4 @@ To-dos:
 1. Add icons to layout metadata
 2. Add manifest to layout metadata
 3. Add image urls to layout metadata
+4. Delete cardImageStyle prop from itemcard if unused
