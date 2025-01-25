@@ -4,7 +4,7 @@ import "animate.css";
 
 type Props = {
   heading: string;
-  headingStyle?: any;
+  headingStyle?: string;
 }
 
 export const HeadingText:React.FC<Props> = ({ heading, headingStyle }) => {
