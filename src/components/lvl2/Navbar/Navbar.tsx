@@ -34,11 +34,6 @@ export const Navbar = () => {
   const handleReservationClick = () => {
     setCloseNav(!closeNav);
     openModal();
-    // setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
   };
 
   return (
