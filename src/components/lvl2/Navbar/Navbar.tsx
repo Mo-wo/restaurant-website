@@ -6,18 +6,21 @@ import logo from '@/assets/images/logo.svg';
 import styles from './navbar.module.css';
 import Link from 'next/link';
 import { app_text } from '@/constants/constants';
+import { ReservationForm } from '@/components/lvl3/ReservationForm/ReservationForm';
+import { Modal } from '@/components/lvl3/Modal/Modal';
+import { useModalStore } from '@/context/navContext';
 
 
 export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
-
+  const [showModal, setShowModal] = useState<boolean>(false);
   const [ closeNav, setCloseNav ] = useState<boolean>(false);
-
+  const { isModalOpen, openModal, closeModal } = useModalStore();
 
   const handleNavClose = () => {
     setCloseNav(!closeNav);
-  }
+  };
 
   const navItems = [
     {id: 1, name: 'Home', path: '/'},
@@ -26,9 +29,20 @@ export const Navbar = () => {
     {id: 4, name: 'About us', path: '/about-us'},
     {id: 5, name: 'Contact', path: '/contact'},
     {id: 6, name: 'Reservation', path: '/reservation'}
-  ]
+  ];
+
+  const handleReservationClick = () => {
+    setCloseNav(!closeNav);
+    openModal();
+    // setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
+    <>
     <nav className={styles.nav}>
       <div className={styles.logoBg} role="img" aria-label={`${app_text.name}-logo-background`}>
         <Image src={logo} alt={`${app_text.name}-logo`} className={styles.logo} />
@@ -38,8 +52,7 @@ export const Navbar = () => {
         {navItems.map((item) => (
           <React.Fragment key={item.id}>
             {item.path === '/reservation' ? (
-              <button className={`${styles.reservation} ${styles.mobileButton}`}>
-                <Link href='/reservation' passHref legacyBehavior><a target='_blank'>{item.name}</a></Link>
+              <button className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}>{item.name}
               </button>
             ) : (
               <li key={item.id} className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
@@ -50,9 +63,9 @@ export const Navbar = () => {
         ))}
       </ul>
 
-      <button className={styles.deskTopButton}>
-        <Link href='/reservation' passHref legacyBehavior><a target='_blank' >Reservation</a></Link>
-      </button>
+      {<button className={styles.deskTopButton}>
+        <Link href='#reservation' passHref legacyBehavior><a >Reservation</a></Link>
+      </button>}
 
       <div className={styles.menuWrapper} onClick={handleNavClose}>
         <span className={`${closeNav ? styles.line1 : styles.line} ${styles.lineColour}`}></span>
@@ -60,5 +73,9 @@ export const Navbar = () => {
         <span className={closeNav ? styles.line3 : `${styles.line} ${styles.lineColour}`}></span>
       </div>
     </nav>
+    <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <ReservationForm />
+    </Modal>
+    </>
   );
 };

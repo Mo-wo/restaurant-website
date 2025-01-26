@@ -17,7 +17,7 @@ export default function Hero() {
           <h1>WHERE <br/> FLAVOUR  <br/> MEETS DELIGHT</h1>
           <p>Experience the perfect blend of fresh ingredients, bold flavors, and unforgettable moments at every bite</p>
           <button className={styles.heroBtn}>
-                <Link href='/menu' passHref legacyBehavior><a target='_blank'>View our menu</a></Link>
+                <Link href='/menu' passHref legacyBehavior><a>View our menu</a></Link>
               </button>
         </article>
       </BackgroundImage>

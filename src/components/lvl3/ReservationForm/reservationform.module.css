@@ -13,25 +13,28 @@
 
 .formHeading {
   color: var(--color-primary);
-  text-align: right;
+  font-size: var(--text-regular);
+  text-align: center;
 }
+
 
 .infoText {
   color: var(--color-primary);
   font-size: var(--text-small);
+  text-align: left;
 }
 
 .formInputContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: var(--spacing-small);
+
+  gap: var(--spacing-large);
 }
 
 .formInputWrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -43,6 +46,8 @@
 .label {
   font-weight: var(--weight-bold);
   margin-right: var(--spacing-small);
+  text-align: left;
+  align-self: flex-start;
 }
 
 .input {
@@ -52,9 +57,44 @@
   background-color: var(--color-heading-text);
   border: none;
   outline: none;
-  color:  var(--color-primary)
+  color:  var(--color-primary);
+  width: 100%;
+  align-self: flex-start;
 }
 
 .formBtn{
   margin-top: var(--spacing-xl);
+  align-self: center;
+}
+
+@media screen and (min-width: 400px) {
+
+  .formHeading {
+    text-align: right;
+  font-size: var(--text-medium);
+}
+
+.infoText {
+  display: flex;
+}
+
+.formInputContainer {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+  .formInputWrapper {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .label {
+    align-self: center;
+  }
+
+  .input {
+    width: 200px;
+  }
+  .formBtn {
+    align-self: flex-end;
+  }
 }

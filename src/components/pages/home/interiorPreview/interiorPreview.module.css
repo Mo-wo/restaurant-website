@@ -19,7 +19,6 @@
 
 .cardWrapperMenu {
   width: clamp(100px, 25vw, 250px);
-  height: 250px;
 }
 
 .cardWrapperMenu:nth-child(1) {

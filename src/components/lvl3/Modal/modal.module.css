@@ -1,0 +1,42 @@
+.modal {
+  border: none;
+  border-radius: 8px;
+  width: 95%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.modalContent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: var(--spacing-xxxl) 10px;
+}
+
+.modal::backdrop {
+  background-color: #00000099;
+}
+
+.closeButton {
+  width: auto;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icon {
+  color: var(--color-secondary);
+}

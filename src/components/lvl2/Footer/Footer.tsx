@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import styles from './footer.module.css';
 import { ReservationForm } from '@/components/lvl3/ReservationForm/ReservationForm';
@@ -7,19 +8,22 @@ import { app_text } from '@/constants/constants';
 import { RiMailSendLine } from "react-icons/ri";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiSmartphone } from "react-icons/gi";
+import { useModalStore } from '@/context/navContext';
 
 const Footer: React.FC = () => {
+    const { isModalOpen} = useModalStore();
+
   return (
     <footer className={styles.footer}>
 
       {/* Reservation form section */}
-      <section className={styles.footerTop}>
+      {!isModalOpen && <section className={styles.footerTop} id='reservation'>
         <div role={'complementary'} className={styles.imgLeft}>
         </div>
       <ReservationForm />
         <div role={'complementary'} className={styles.imgRight}>
         </div>
-      </section>
+      </section>}
 
       {/* Contact and opening hours section */}
       <section className={styles.footerBottom}>

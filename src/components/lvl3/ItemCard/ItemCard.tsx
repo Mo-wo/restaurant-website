@@ -21,7 +21,7 @@ interface ItemCardProps {
 export const ItemCard: React.FC<ItemCardProps> = ({
   cardStyle, cardImgWrapperStyle, cardImgSrc, cardImgStyle, cardTextWrapperStyle, cardHeading, cardInfo, btnStyle, btnPath, btnText, showBtn, heading
 }) => {
-  console.log(cardImgStyle)
+  
   return (
     <div role='complementary' className={`${styles.cardWrapper} ${cardStyle}`} data-aos='zoom-in-up' data-aos-offset='50'>
       {cardImgSrc &&
