@@ -14,7 +14,6 @@ import { useModalStore } from '@/context/navContext';
 export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
-  const [showModal, setShowModal] = useState<boolean>(false);
   const [ closeNav, setCloseNav ] = useState<boolean>(false);
   const { isModalOpen, openModal, closeModal } = useModalStore();
 
