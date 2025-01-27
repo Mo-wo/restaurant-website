@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { Navbar } from '@/components/lvl2/Navbar/Navbar';
-// import { BackToTop } from '@/components/lvl1/BackToTop/BackToTop';
 // import { ThemeSwitcher } from '@/components/lvl1/ThemeSwitcher/ThemeSwitcher';
 import { app_text } from '@/constants/constants';
 import Head from 'next/head';
