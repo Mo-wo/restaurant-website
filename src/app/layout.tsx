@@ -73,7 +73,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          {/* <ThemeSwitcher /> */}
         </ThemeProvider>
       </body>
     </html>
