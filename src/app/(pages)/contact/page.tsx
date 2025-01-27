@@ -9,7 +9,7 @@ export default function Contact() {
         alignItems: "center",
       }}
     >
-      Contact Page
+      Contact us Page
     </h1>
   );
 }
