@@ -1,4 +1,4 @@
-import { BackgroundImage } from '@/components/lvl2/backgroundImage/BackgroundImage';
+import { HomeBanner } from '@/components/lvl2/homeBanner/HomeBanner';
 import styles from './hero.module.css';
 import homeheroimage from '@/assets/images/homeheroimage.svg';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section className={styles.heroContainer}>
-      <BackgroundImage
+      <HomeBanner
         src={homeheroimage}
         alt={'hero-image'}
         style={styles.heroImageWrapper}
@@ -21,7 +21,7 @@ export default function Hero() {
             <Link href='/menu' passHref legacyBehavior>View our menu</Link>
           </button>
         </article>
-      </BackgroundImage>
+      </HomeBanner>
     </section>
   );
 }

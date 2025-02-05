@@ -9,6 +9,8 @@
     justify-content: center;
     width: 100px;
     height: 100px;
+    padding: 0 5px;
+    text-transform: none;
     border-radius: 50%;
     z-index: 1000;
 }

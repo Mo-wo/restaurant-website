@@ -1,0 +1,39 @@
+.backgroundWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 30vh;
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.article {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  row-gap: 30px;
+}
+
+.article h2 {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.article p {
+  text-align: center;
+}
+
+
+@media screen and (min-width: 800px) {
+  .article h2 {
+    font-size: var(--text-semi-large);
+  }
+}

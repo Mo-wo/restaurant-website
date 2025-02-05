@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from './backgroundImage.module.css';
+import styles from './homeBanner.module.css';
 
-interface BackgroundImageProps {
+interface HomeBannerProps {
   src: string;
   alt: string;
   style?: string;
@@ -9,15 +9,15 @@ interface BackgroundImageProps {
   children?: React.ReactNode;
 }
 
-export const BackgroundImage: React.FC<BackgroundImageProps> = ({ src, alt, style, imgStyle, children }) => {
+export const HomeBanner: React.FC<HomeBannerProps> = ({ src, alt, style, imgStyle, children }) => {
   return (
     <div role='complementary' className={`${styles.backgroundWrapper} ${style}`}>
-      <Image
+      {src && <Image
         src={src}
         alt={alt}
         priority={true}
         className={imgStyle}
-      />
+      />}
       <div className={styles.contentWrapper}>
         {children}
       </div>
