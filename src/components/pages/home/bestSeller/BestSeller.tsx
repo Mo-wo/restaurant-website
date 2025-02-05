@@ -1,6 +1,6 @@
-import { Section } from '@/components/lvl1/Section/Section';
+import { Section } from '@/components/lvl1/section/Section';
 import styles from './bestSeller.module.css';
-import { ItemCard } from '@/components/lvl3/ItemCard/ItemCard';
+import { ItemCard } from '@/components/lvl3/itemCard/ItemCard';
 import bestsellerimageone from '@/assets/images/menuItems/bestsellerimageone.svg';
 import bestsellerimagetwo from '@/assets/images/menuItems/bestsellerimagetwo.svg';
 import bestsellerimagethree from '@/assets/images/menuItems/bestsellerimagethree.svg';

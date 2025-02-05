@@ -111,7 +111,7 @@
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-regular);
+  gap: var(--spacing-large);
   margin-bottom: var(--spacing-xl);
 }
 
@@ -212,6 +212,10 @@
   .openingHoursWrapper {
     justify-content: flex-end;
     align-items: flex-end;
+  }
+
+  .openingHoursWrapper p {
+    text-align: right;
   }
 }
 

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
-import { Navbar } from '@/components/lvl2/Navbar/Navbar';
+import { Navbar } from '@/components/lvl2/navbar/Navbar';
 import { app_text } from '@/constants/constants';
 import Head from 'next/head';
 import AOSInitializer from './AOSInitialiser';
-import Footer from '@/components/lvl2/Footer/Footer';
+import Footer from '@/components/lvl2/footer/Footer';
+import { DiscountButton } from '@/components/lvl1/discountButton/DiscountButton';
 
 export const metadata: Metadata = {
   title: app_text.name,
@@ -72,7 +73,8 @@ export default function RootLayout({
           <main className="main">
             {children}
           </main>
-          <Footer />
+            <DiscountButton />
+            <Footer />
         </ThemeProvider>
       </body>
     </html>

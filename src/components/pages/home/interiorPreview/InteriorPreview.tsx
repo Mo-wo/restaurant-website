@@ -1,6 +1,6 @@
-import { Section } from '@/components/lvl1/Section/Section';
+import { Section } from '@/components/lvl1/section/Section';
 import styles from './interiorPreview.module.css';
-import { ItemCard } from '@/components/lvl3/ItemCard/ItemCard';
+import { ItemCard } from '@/components/lvl3/itemCard/ItemCard';
 import interiorimageone from '@/assets/images/interior/interiorimageone.svg';
 import interiorimagetwo from '@/assets/images/interior/interiorimagetwo.svg';
 import interiorimagethree from '@/assets/images/interior/interiorimagethree.svg';

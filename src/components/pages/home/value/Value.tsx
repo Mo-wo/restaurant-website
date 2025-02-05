@@ -1,4 +1,4 @@
-import { Section } from '@/components/lvl1/Section/Section';
+import { Section } from '@/components/lvl1/section/Section';
 import styles from './value.module.css';
 import Link from 'next/link';
 

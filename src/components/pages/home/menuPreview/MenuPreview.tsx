@@ -1,6 +1,6 @@
-import { Section } from '@/components/lvl1/Section/Section';
+import { Section } from '@/components/lvl1/section/Section';
 import styles from './menuPreview.module.css';
-import { ItemCard } from '@/components/lvl3/ItemCard/ItemCard';
+import { ItemCard } from '@/components/lvl3/itemCard/ItemCard';
 import menuitemone from '@/assets/images/menuItems/menuitemone.svg';
 import menuitemtwo from '@/assets/images/menuItems/menuitemtwo.svg';
 import menuitemthree from '@/assets/images/menuItems/menuitemthree.svg';

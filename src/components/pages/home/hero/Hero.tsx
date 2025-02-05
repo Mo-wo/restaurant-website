@@ -1,4 +1,4 @@
-import { BackgroundImage } from '@/components/lvl2/BackgroundImage/BackgroundImage';
+import { BackgroundImage } from '@/components/lvl2/backgroundImage/BackgroundImage';
 import styles from './hero.module.css';
 import homeheroimage from '@/assets/images/homeheroimage.svg';
 import Link from 'next/link';

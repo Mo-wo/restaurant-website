@@ -6,8 +6,8 @@ import logo from '@/assets/images/logo.svg';
 import styles from './navbar.module.css';
 import Link from 'next/link';
 import { app_text } from '@/constants/constants';
-import { ReservationForm } from '@/components/lvl3/ReservationForm/ReservationForm';
-import { Modal } from '@/components/lvl3/Modal/Modal';
+import { ReservationForm } from '@/components/lvl3/reservationForm/ReservationForm';
+import { Modal } from '@/components/lvl3/modal/Modal';
 import { useModalStore } from '@/context/navContext';
 
 
