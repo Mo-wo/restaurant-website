@@ -13,6 +13,11 @@
   gap: var(--spacing-xxl);
 }
 
+.contentContainer h2 {
+  width: 100%;
+  text-align: center !important;
+}
+
 .contentContainer p {
   text-align: center;
 }

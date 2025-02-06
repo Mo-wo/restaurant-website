@@ -1,15 +1,11 @@
+import { PageBanner } from '@/components/lvl2/pageBanner/PageBanner';
+import Hero from '@/components/pages/aboutUs/hero/Hero';
 
 export default function AboutUs() {
   return (
-    <h1
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      ABout Us Page
-    </h1>
+    <>
+      <PageBanner heading={'GET TO KNOW US'} desc={'Meet the people and passion behind your favorite dining experience'} />
+      <Hero />
+    </>
   );
 }

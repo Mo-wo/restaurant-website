@@ -1,6 +1,7 @@
 import { PageBanner } from "@/components/lvl2/pageBanner/PageBanner";
 import Offerings from "@/components/pages/menu/offerings/Offerings";
 import Categories from "@/components/pages/menu/categories/Categories";
+import SignatureDishes from "@/components/pages/menu/signatureDishes/SignatureDishes";
 
 export default function Menu() {
   return (
@@ -11,6 +12,7 @@ export default function Menu() {
       />
       <Offerings />
       <Categories/>
+      <SignatureDishes />
     </>
   );
 }

@@ -1,0 +1,34 @@
+.section, .orderSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-xxxl);
+}
+
+.orderSection {
+  gap: var(--spacing-medium)
+}
+
+.orderSection button {
+  margin-top: var(--spacing-xxxl);
+}
+
+@media screen and (min-width: 660px) {
+  .container {
+    justify-content: space-between;
+  }
+}

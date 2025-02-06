@@ -8,11 +8,10 @@ import bestsellerimagethree from '@/assets/images/menuItems/bestsellerimagethree
 export const BestSeller = () => {
   return (
     <Section sectionStyle={styles.bestSellerSection} color={'white'}>
-      <h2 data-aos='fade-down'>A taste of our best</h2>
+      <h2 data-aos='zoom-in'>A taste of our best</h2>
       <div className={styles.cardContainer}>
         <ItemCard
           cardStyle={styles.cardWrapper}
-          cardImgWrapperStyle={''}
           cardImgSrc={bestsellerimageone}
           cardHeading={'Jollof Rice'}
           cardInfo={'A flavorful rice dish cooked with tomatoes, peppers, onions, and spices.'}
@@ -20,7 +19,6 @@ export const BestSeller = () => {
         />
         <ItemCard
           cardStyle={styles.cardWrapper}
-          cardImgWrapperStyle={''}
           cardImgSrc={bestsellerimagetwo}
           cardHeading={'Pounded Yam and Egusi'}
           cardInfo={'A smooth, stretchy dough-like dish made from yams, paired with egusi soup, a rich, nutty soup.'}
@@ -28,7 +26,6 @@ export const BestSeller = () => {
         />
         <ItemCard
           cardStyle={styles.cardWrapper}
-          cardImgWrapperStyle={''}
           cardImgSrc={bestsellerimagethree}
           cardHeading={'Moi Moi'}
           cardInfo={'A steamed bean pudding made from blended beans, peppers, and onions, often served has a side dish..'}
