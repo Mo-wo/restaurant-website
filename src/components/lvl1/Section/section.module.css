@@ -3,6 +3,7 @@
   min-height: auto;
   display: flex;
   padding: 100px 10px;
+  margin: var(--spacing-xl) 0;
 }
 
 .black {
@@ -27,7 +28,7 @@
   color: var(--color-primary);
 }
 
-.contentContainer {
+.contentWrapper {
   width: 100%;
   display: flex;
 }
