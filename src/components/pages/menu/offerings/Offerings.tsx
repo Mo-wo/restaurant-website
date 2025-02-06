@@ -1,6 +1,4 @@
-import { PageBanner } from '@/components/lvl2/pageBanner/PageBanner';
 import styles from './offerings.module.css';
-import homeheroimage from '@/assets/images/homeheroimage.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 import appetizer from '@/assets/images/menuItems/appetizer.svg';
@@ -16,7 +14,7 @@ export default function Offerings() {
     {
       id: '1',
       imgSrc: appetizer,
-      name: 'Appetizer'
+      name: 'Appetizers'
     },
     {
       id: '2',
@@ -41,12 +39,12 @@ export default function Offerings() {
 
       <div className={styles.container}>
         {offerings.map((offering, index) => (
-          <div key={index.toString()} className={styles.wrapper} >
+          <Link href={'#'} key={index.toString()} className={styles.wrapper}  >
             <div className={styles.imageWrapper} data-aos='fade-up'>
               <Image src={offering.imgSrc} alt={offering.name} className={styles.img} />
             </div>
             <p className={styles.text} data-aos='fade-up'>{offering.name}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </Section>
