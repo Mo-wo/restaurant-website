@@ -1,4 +1,4 @@
-import { HomeBanner } from '@/components/lvl2/homeBanner/HomeBanner';
+import { HomeBanner } from '@/components/lvl2/banner/homeBanner/HomeBanner';
 import styles from './hero.module.css';
 import homeheroimage from '@/assets/images/homeheroimage.svg';
 import Link from 'next/link';

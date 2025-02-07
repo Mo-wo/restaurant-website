@@ -2,6 +2,8 @@
   width: 100%;
   min-height: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 100px 10px;
   margin: var(--spacing-xl) 0;
 }
@@ -11,7 +13,7 @@
   color: var(--color-primary);
 }
 
-.black h2, .black a {
+.black h2, .black a, .black h3, .black h4, .black h5, .black h6 {
   color: var(--color-primary);
 }
 

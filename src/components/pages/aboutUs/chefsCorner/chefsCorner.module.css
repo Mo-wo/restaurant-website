@@ -1,0 +1,110 @@
+.contentContainer,
+.articleContainer,
+.dishesContainer,
+.dishesWrapper,
+.dishWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xxl);
+}
+
+.h2 {
+  text-align: center;
+}
+
+.chefImage {
+  width: 80%;
+  max-width: 450px;
+}
+
+.article p {
+  text-align: center;
+  max-width: 700px;
+}
+
+.dishWrapper h4,
+.dishWrapper p {
+  text-align: center;
+}
+
+.image {
+  width: 80%;
+}
+
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(2 * var(--spacing-xxxl));
+}
+
+
+@media screen and (min-width: 500px) {
+  .dishesWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dishWrapper {
+    width: 45%;
+  }
+
+  .article2 {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-sa;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    width: 60%;
+  }
+
+  .article2 p {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contentContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .chefImage {
+    width: 50%;
+    max-width: 550px;
+
+  }
+
+  .articleContainer {
+    width: 50%;
+    align-items: flex-end;
+  }
+
+  .article p {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .contentContainer {
+    justify-content: space-around;
+  }
+  .chefImage {
+    width: 60%;
+    max-width: 550px;
+
+  }
+
+  .articleContainer {
+    width: 40%;
+    align-items: flex-end;
+  }
+}

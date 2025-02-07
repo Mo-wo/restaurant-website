@@ -1,4 +1,4 @@
-import { PageBanner } from "@/components/lvl2/pageBanner/PageBanner";
+import { PageBanner } from "@/components/lvl2/banner/pageBanner/PageBanner";
 import Offerings from "@/components/pages/menu/offerings/Offerings";
 import Categories from "@/components/pages/menu/categories/Categories";
 import SignatureDishes from "@/components/pages/menu/signatureDishes/SignatureDishes";
