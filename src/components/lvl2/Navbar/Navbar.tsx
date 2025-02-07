@@ -42,7 +42,7 @@ export const Navbar = () => {
         <Image src={logo} alt={`${app_text.name}-logo`} className={styles.logo} />
       </div>
 
-      <ul className={closeNav ? styles.ul :  `${styles.ulClose}`}>
+      <ul className={closeNav ? styles.ul : `${styles.ulClose}`}>
         {navItems.map((item) => (
           <React.Fragment key={item.id}>
             {item.path === '/reservation' ? (

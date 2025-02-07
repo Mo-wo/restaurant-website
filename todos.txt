@@ -9,3 +9,5 @@ To-dos:
 2. Add manifest to layout metadata
 3. Add image urls to layout metadata
 4. Delete cardImageStyle prop from itemcard if unused
+5. Change all buttons to button component
+6. Change all components to named exports

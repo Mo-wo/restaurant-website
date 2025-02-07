@@ -1,0 +1,107 @@
+.sectionWrapper, .contactItem, .circle, .contactText, .socialsWrapper, .contactItem2, .businessHoursWrapper, .businessHoursItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactItem, .socialsWrapper,  .contactText, .businessHoursWrapper, .businessHoursItem {
+  flex-direction: column;
+}
+
+.sectionWrapper {
+  flex-wrap: wrap;
+  gap: var(--spacing-xxl)
+}
+
+.contactItem {
+  gap: var(--spacing-large)
+}
+
+.circle {
+  background-color: var(--color-gray);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--circle);
+}
+
+.contactText {
+  gap: var(--spacing-small);
+}
+
+.contactText h3, .contactText p {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.contactText h3 {
+  text-transform: uppercase;
+}
+
+.contactText p {
+  height: 50px;
+}
+
+.socialsWrapper {
+  gap: var(--spacing-small);
+}
+
+.contactItem2 {
+  gap: var(--spacing-medium);
+}
+
+.businessHoursWrapper {
+  gap: var(--spacing-large)
+}
+
+.businessHoursItem h4 {
+  text-transform: capitalize;
+}
+
+.businessHours {
+  height: auto !important;
+}
+
+
+@media screen and (min-width: 320px) {
+  .businessHoursWrapper {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .contactItem {
+    width: 45%;
+  }
+
+  .contactItem:last-of-type {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contactItem {
+    width: 25%;
+  }
+
+  .contactItem:nth-child(4), .contactItem:last-of-type {
+    width: 45%;
+    align-self: center;
+  }
+
+  /* .socialsWrapper {
+    flex-direction: row;
+    gap: var(--spacing-xl);
+  } */
+
+  .businessHoursWrapper {
+    gap: var(--spacing-large)
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contactItem:nth-child(4), .contactItem:last-of-type {
+    max-width: 30%;
+  }
+
+
+}
