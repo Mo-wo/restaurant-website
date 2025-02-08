@@ -1,4 +1,5 @@
-.sectionWrapper, .formContainer, .inputContainer, .inputWrapper, .label {
+.sectionWrapper, .formContainer, .inputContainer, .inputWrapper, .label, .form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +8,7 @@
 
 .formContainer {
   width: 100%;
-  height: 600px;
+  height: 700px;
   max-width: 500px;
   position: relative;
   background-image: url('../../../../assets/images/contactImage.svg');
@@ -19,33 +20,121 @@
 }
 
 .image {
-  display: none;
+  display: none !important;
+  border-radius: var(--border-radius);
 }
 
 .form {
   position: absolute;
   width: 90%;
-  height: 80%;
   padding: 30px 10px;
   background-color: var(--color-primary);
   border-radius: var(--border-radius);
+}
 
+.form h2 {
+  font-size: var(--text-semi-medium);
 }
 
 .inputContainer {
   gap: var(--spacing-large);
+  align-items: flex-start;
 }
 
 .label {
+  width: 100%;
   gap: var(--spacing-large);
-}
-
-.label {
+  align-items: flex-start;
   font-weight: var(--weight-semi-bold);
+  color: #ababab;
 }
 
 .input {
   background-color: var(--color-primary);
-  border-bottom: 1px solid black;
+  border: none;
+  border-bottom: 0.5px solid black;
   outline: none;
+  width: 100%;
+}
+
+.textarea {
+  vertical-align: bottom;
+  border: 0.5px solid black;
+  border-radius: var(--border-radius);
+}
+
+.form button {
+  margin-top: var(--spacing-xxxl);
+  width: var(--button-width-mobile);
+}
+
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(2 * var(--spacing-xxxl));
+}
+
+.ctaSection h2 {
+  margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 320px) {
+  .form {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .form {
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .formContainer {
+    max-width: 100%;
+    background: none;
+    flex-direction: row;
+    padding: 0;
+    gap: var(--spacing-large);
+  }
+
+  .image {
+    display: flex !important;
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .form {
+    position: static;
+    width: 50%;
+    max-width: 500px;
+    padding: 0;
+  }
+
+  .form button {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .formContainer {
+    gap: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .formContainer {
+    gap: 100px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .formContainer {
+    gap: 150px;
+  }
 }
