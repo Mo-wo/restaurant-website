@@ -9,6 +9,7 @@ import { app_text } from '@/constants/constants';
 import { ReservationForm } from '@/components/lvl3/reservationForm/ReservationForm';
 import { Modal } from '@/components/lvl3/modal/Modal';
 import { useModalStore } from '@/context/navContext';
+import { IoMdArrowDropdown } from "react-icons/io";
 
 
 export const Navbar = () => {
@@ -43,7 +44,7 @@ export const Navbar = () => {
       </div>
 
       <ul className={closeNav ? styles.ul : `${styles.ulClose}`}>
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <React.Fragment key={item.id}>
             {item.path === '/reservation' ? (
               <button className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}>{item.name}
@@ -51,6 +52,9 @@ export const Navbar = () => {
             ) : (
               <li key={item.id} className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
                 <Link href={item.path}>{item.name}</Link>
+                {(item.id === 2 || item.id === 3) && (
+                  <span><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} /></span>
+                )}
               </li>
             )}
           </React.Fragment>

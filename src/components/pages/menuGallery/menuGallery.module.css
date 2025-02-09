@@ -1,0 +1,48 @@
+.galleryWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 2fr));
+  grid-auto-rows: 20px;
+  gap: 20px;
+}
+
+.menuImg {
+  display: inline;
+  align-items: flex-start;
+  /* justify-content: flex-start; */
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100% !important;
+  /* transition: transform 0.3s; */
+}
+
+.menuImg img {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.menuImg:hover {
+  /* transform: translateY(-10px); */
+}
+
+.menuImg1 { grid-row: span 6; border: 3px solid blue }
+.menuImg2 { grid-row: span 9; border: 3px solid red }
+.menuImg3 { grid-row: span 6; border: 3px solid green }
+.menuImg4 { grid-row: span 6; border: 3px solid greenyellow }
+.menuImg5 { grid-row: span 9; border: 3px solid rebeccapurple }
+.menuImg6 { grid-row: span 6; border: 3px solid brown }
+.menuImg7 { grid-row: span 6; border: 3px solid black }
+.menuImg8 { grid-row: span 9; border: 3px solid firebrick }
+.menuImg9 { grid-row: span 6; border: 3px solid orange }
+.menuImg10 { grid-row: span 6; border: 3px solid orangered }
+.menuImg11 { grid-row: span 9; border: 3px solid forestgreen }
+.menuImg12 { grid-row: span 6; border: 3px solid fuchsia }
+.menuImg13 { grid-row: span 6; border: 3px solid aqua }
+.menuImg14 { grid-row: span 6; border: 3px solid chocolate }
+.menuImg15 { grid-row: span 12; border: 3px solid crimson }
+.menuImg16 { grid-row: span 6; border: 3px solid cornflowerblue }
+.menuImg17 { grid-row: span 6; border: 3px solid darkred }
+.menuImg18 { grid-row: span 6; border: 3px solid blueviolet }

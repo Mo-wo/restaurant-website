@@ -5,7 +5,7 @@ export const ReservationForm = () => {
   return (
     <form className={styles.form}>
       <div role='complementary' className={styles.formHeadingContainer}>
-      <h2 className={styles.formHeading}>RESERVE YOUR TABLE <br/> TODAY - DELIGHT AWAITS</h2>
+      <h2 className={styles.formHeading} style={{marginBottom: 0}}>RESERVE YOUR TABLE <br/> TODAY - DELIGHT AWAITS</h2>
       </div>
 
       <p className={styles.infoText}>

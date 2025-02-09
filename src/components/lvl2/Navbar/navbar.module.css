@@ -58,6 +58,9 @@
 .li:hover, .active:hover {
   border-bottom: 2px solid var(--color-tertiary);
 }
+.dropdown {
+  transform: translateY(3.2px);
+}
 .mobileButton {
   margin: 20px;
 }
