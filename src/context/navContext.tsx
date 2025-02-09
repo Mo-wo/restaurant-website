@@ -20,5 +20,5 @@ type DropdownState = {
 
 export const useDropdownStore = create<DropdownState>((set) => ({
   showDropdown: false,
-  toggleDropdown: () => set({ showDropdown: !showDropdown }),
+  toggleDropdown: () => set((state) => ({ showDropdown: !state.showDropdown })),
 }));

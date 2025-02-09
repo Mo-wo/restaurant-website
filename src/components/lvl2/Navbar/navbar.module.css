@@ -46,6 +46,7 @@
   font-weight: var(--weight-bold);
   font-size: var(--text-regular);
   text-transform: uppercase;
+  position: relative;
   border-bottom: 2px solid rgba(227, 221, 221, 0);
   transition: border-bottom 0.4s ease;
 }
@@ -58,8 +59,17 @@
 .li:hover, .active:hover {
   border-bottom: 2px solid var(--color-tertiary);
 }
+.dropdownWrapper:hover .showDropdown {
+  display: flex;
+}
 .dropdown {
   transform: translateY(3.2px);
+}
+.showDropdown {
+  display: flex;
+}
+.hideDropdown {
+  display: none;
 }
 .mobileButton {
   margin: 20px;

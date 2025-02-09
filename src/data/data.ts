@@ -7,6 +7,14 @@ import staff6 from '@/assets/images/aboutUsImages/staff6.svg';
 import signatureDish1 from '@/assets/images/aboutUsImages/signatureDish1.svg';
 import signatureDish2 from '@/assets/images/aboutUsImages/signatureDish2.svg';
 
+export const menuDropdownData = [
+  'Breakfast', 'Lunch', 'Dinner', 'Appetisers', 'Main Courses', 'Deserts', 'Drinks'
+];
+
+export const galleryDropdownData = [
+  'Menu', 'Interior'
+];
+
 // dummy team data
 export const team = [
   {

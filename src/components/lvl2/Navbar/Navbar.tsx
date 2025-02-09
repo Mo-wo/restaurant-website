@@ -8,8 +8,10 @@ import Link from 'next/link';
 import { app_text } from '@/constants/constants';
 import { ReservationForm } from '@/components/lvl3/reservationForm/ReservationForm';
 import { Modal } from '@/components/lvl3/modal/Modal';
-import { useModalStore } from '@/context/navContext';
+import { useDropdownStore, useModalStore } from '@/context/navContext';
 import { IoMdArrowDropdown } from "react-icons/io";
+import { Dropdown } from '@/components/lvl3/Dropdown/Dropdown';
+import { galleryDropdownData, menuDropdownData } from '@/data/data';
 
 
 export const Navbar = () => {
@@ -17,6 +19,7 @@ export const Navbar = () => {
   const isActive = (path: string) => pathname === path;
   const [ closeNav, setCloseNav ] = useState<boolean>(false);
   const { isModalOpen, openModal, closeModal } = useModalStore();
+  const { showDropdown, toggleDropdown } = useDropdownStore();
 
   const handleNavClose = () => {
     setCloseNav(!closeNav);
@@ -36,6 +39,10 @@ export const Navbar = () => {
     openModal();
   };
 
+  const handleItemClick = (item: string) => {
+    console.log('Selected item:', item);
+  }
+
   return (
     <>
     <nav className={styles.nav}>
@@ -53,8 +60,12 @@ export const Navbar = () => {
               <li key={item.id} className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
                 <Link href={item.path}>{item.name}</Link>
                 {(item.id === 2 || item.id === 3) && (
-                  <span><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} /></span>
+                  <>
+                  <span onClick={toggleDropdown} className={styles.dropdownWrapper}><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} /></span>
+                  <Dropdown data={item.id === 2 ? menuDropdownData : item.id === 3 ? galleryDropdownData : []} onItemClick={handleItemClick} className={showDropdown ? styles.showDropdown : styles.hideDropdown} parentPath={item.name} />
+                  </>
                 )}
+
               </li>
             )}
           </React.Fragment>
