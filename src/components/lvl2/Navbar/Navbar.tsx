@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation'
 import Image from 'next/image';
 import logo from '@/assets/images/logo.svg';
@@ -8,31 +8,46 @@ import Link from 'next/link';
 import { app_text } from '@/constants/constants';
 import { ReservationForm } from '@/components/lvl3/reservationForm/ReservationForm';
 import { Modal } from '@/components/lvl3/modal/Modal';
-import { useDropdownStore, useModalStore } from '@/context/navContext';
+import { useModalStore } from '@/context/navContext';
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Dropdown } from '@/components/lvl3/Dropdown/Dropdown';
-import { galleryDropdownData, menuDropdownData } from '@/data/data';
+import { galleryDropdownData, menuDropdownData, navItems } from '@/data/data';
 
 
 export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
-  const [ closeNav, setCloseNav ] = useState<boolean>(false);
+  const [closeNav, setCloseNav] = useState<boolean>(false);
   const { isModalOpen, openModal, closeModal } = useModalStore();
-  const { showDropdown, toggleDropdown } = useDropdownStore();
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        handleDropdownClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleDropdownOpen = (dropdownId: string) => {
+    setActiveDropdown(dropdownId);
+  };
+
+  const handleDropdownClose = () => {
+    setActiveDropdown(null);
+  };
 
   const handleNavClose = () => {
     setCloseNav(!closeNav);
   };
-
-  const navItems = [
-    {id: 1, name: 'Home', path: '/'},
-    {id: 2, name: 'Menu', path: '/menu'},
-    {id: 3, name: 'Gallery', path: '/gallery'},
-    {id: 4, name: 'About us', path: '/about-us'},
-    {id: 5, name: 'Contact', path: '/contact'},
-    {id: 6, name: 'Reservation', path: '/reservation'}
-  ];
 
   const handleReservationClick = () => {
     setCloseNav(!closeNav);
@@ -45,46 +60,50 @@ export const Navbar = () => {
 
   return (
     <>
-    <nav className={styles.nav}>
-      <div className={styles.logoBg} role="img" aria-label={`${app_text.name}-logo-background`}>
-        <Image src={logo} alt={`${app_text.name}-logo`} className={styles.logo} />
-      </div>
+      <nav className={styles.nav}>
+        <div className={styles.logoBg} role="img" aria-label={`${app_text.name}-logo-background`}>
+          <Image src={logo} alt={`${app_text.name}-logo`} className={styles.logo} />
+        </div>
 
-      <ul className={closeNav ? styles.ul : `${styles.ulClose}`}>
-        {navItems.map((item, index) => (
-          <React.Fragment key={item.id}>
-            {item.path === '/reservation' ? (
-              <button className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}>{item.name}
-              </button>
-            ) : (
-              <li key={item.id} className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
-                <Link href={item.path}>{item.name}</Link>
-                {(item.id === 2 || item.id === 3) && (
-                  <>
-                  <span onClick={toggleDropdown} className={styles.dropdownWrapper}><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} /></span>
-                  <Dropdown data={item.id === 2 ? menuDropdownData : item.id === 3 ? galleryDropdownData : []} onItemClick={handleItemClick} className={showDropdown ? styles.showDropdown : styles.hideDropdown} parentPath={item.name} />
-                  </>
-                )}
+        <ul className={closeNav ? styles.ul : `${styles.ulClose}`}>
+          {navItems.map((item, index) => (
+            <React.Fragment key={item.id}>
+              {item.path === '/reservation' ? (
+                <button className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}>{item.name}
+                </button>
+              ) : (
+                <li key={item.id} className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
+                  <Link href={item.path}>{item.name}</Link>
+                  {(item.id === 2 || item.id === 3) && (
+                    <>
+                      <span onMouseEnter={() => handleDropdownOpen(item.name)}
+          // onMouseLeave={handleDropdownClose}
+          ref={dropdownRef}
 
-              </li>
-            )}
-          </React.Fragment>
-        ))}
-      </ul>
+                        // onClick={() => openDropdown(item.name)}
+                        className={styles.dropdownWrapper}><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} /></span>
+                      <Dropdown data={item.id === 2 ? menuDropdownData : galleryDropdownData} onItemClick={handleDropdownClose} className={activeDropdown === item.name ? styles.showDropdown : styles.hideDropdown} />
+                    </>
+                  )}
+                </li>
+              )}
+            </React.Fragment>
+          ))}
+        </ul>
 
-      {<button className={styles.deskTopButton}>
-        <Link href='#reservation' passHref legacyBehavior><a >Reservation</a></Link>
-      </button>}
+        {<button className={styles.deskTopButton}>
+          <Link href='#reservation' passHref legacyBehavior><a >Reservation</a></Link>
+        </button>}
 
-      <div className={styles.menuWrapper} onClick={handleNavClose}>
-        <span className={`${closeNav ? styles.line1 : styles.line} ${styles.lineColour}`}></span>
-        <span className={closeNav ? styles.line2 : styles.line}></span>
-        <span className={closeNav ? styles.line3 : `${styles.line} ${styles.lineColour}`}></span>
-      </div>
-    </nav>
-    <Modal isOpen={isModalOpen} onClose={closeModal}>
-      <ReservationForm />
-    </Modal>
+        <div className={styles.menuWrapper} onClick={handleNavClose}>
+          <span className={`${closeNav ? styles.line1 : styles.line} ${styles.lineColour}`}></span>
+          <span className={closeNav ? styles.line2 : styles.line}></span>
+          <span className={closeNav ? styles.line3 : `${styles.line} ${styles.lineColour}`}></span>
+        </div>
+      </nav>
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <ReservationForm />
+      </Modal>
     </>
   );
 };

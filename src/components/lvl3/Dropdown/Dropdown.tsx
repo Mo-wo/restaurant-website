@@ -3,14 +3,12 @@ import styles from './dropdown.module.css';
 import Link from 'next/link';
 
 type DropdownProps = {
-  data: string[];
-  onItemClick: (item: string) => void;
-  className: string;
-  parentPath: string;
+  data: {id: string, name: string, path: string}[];
+  onItemClick: () => void;
+  className?: string;
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({data, onItemClick, className, parentPath}) => {
-
+export const Dropdown: React.FC<DropdownProps> = ({data, onItemClick, className}) => {
   const handleClick = (item: string) => {
     onItemClick(item);
   }
@@ -18,9 +16,11 @@ export const Dropdown: React.FC<DropdownProps> = ({data, onItemClick, className,
   return (
     <ul className={`${styles.dropdownWrapper} ${className}`}>
       {data.map((item, index) => (
-        <Link href={`/${parentPath}/${item}`}  key={index.toString()} className={styles.dropdownItem}>
-          <li onClick={() => handleClick(item)}>{item}</li>
-        </Link>
+        <li className={styles.dropdownItem}>
+          <Link href={item.path} key={index.toString()} onClick={onItemClick}>
+            {item.name}
+          </Link>
+        </li>
       ))}
     </ul>
   )

@@ -38,8 +38,6 @@ export default function ContactForm() {
         <p>Order online for quick and delicious delivery straight to your door</p>
         <Button href='/gallery/tour' text={'Order Now'} />
       </div>
-
-
     </Section>
   )
 }

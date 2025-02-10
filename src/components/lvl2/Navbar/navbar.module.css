@@ -66,10 +66,10 @@
   transform: translateY(3.2px);
 }
 .showDropdown {
-  display: flex;
+  display: flex !important;
 }
 .hideDropdown {
-  display: none;
+  display: none !important;
 }
 .mobileButton {
   margin: 20px;

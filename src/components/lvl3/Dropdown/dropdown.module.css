@@ -10,15 +10,20 @@
   padding: 10px 20px;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
 .dropdownItem {
   text-transform: capitalize;
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   cursor: pointer;
   transition: color 0.5s ease-in-out;
 }
 
-.dropdownItem:hover {
+.dropdownItem a {
+  color: var(--color-text);
+}
+
+.dropdownItem a:hover {
   color: var(--color-tertiary);
 }
