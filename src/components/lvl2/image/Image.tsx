@@ -1,17 +1,17 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import styles from './image.module.css';
 
-interface ImageComponentProps {
+interface ImageComponentProps extends ImageProps {
   src: string;
   alt: string;
   className?: string;
 }
 
-const ImageComponent: React.FC<ImageComponentProps> = ({ src, alt, className }) => {
+const ImageComponent: React.FC<ImageComponentProps> = ({ src, alt, className, ...imageProps }) => {
   return (
     <div className={`${styles.imgWraper} ${className}`} data-aos='zoom-in-up'>
-      <Image src={src} alt={alt} style={{width: '100%', height: '100%'}} placeholder='blur' blurDataURL='#f7a148' />
+      <Image src={src} alt={alt} style={{width: '100%', height: '100%'}} placeholder='blur' blurDataURL='#f7a148' {...imageProps} />
     </div>
   );
 };

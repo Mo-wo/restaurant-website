@@ -13,6 +13,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { Dropdown } from '@/components/lvl3/Dropdown/Dropdown';
 import { galleryDropdownData, menuDropdownData, navItems } from '@/data/data';
 import { Button, LinkButton } from '@/components/lvl2/button/Button';
+import ImageComponent from '../image/Image';
 
 
 export const Navbar = () => {
@@ -55,9 +56,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <div className={styles.logoBg} role="img" aria-label={`${app_text.name}-logo-background`}>
-          <Image src={logo} alt={`${app_text.name}-logo`} className={styles.logo} />
-        </div>
+        <ImageComponent src={logo} alt={`${app_text.name}-logo`} className={styles.logoBg} role="img" aria-label={`${app_text.name}-logo-background`} />
 
         <ul className={closeNav ? styles.ul : `${styles.ulClose}`}>
           {navItems.map((item, index) => (
