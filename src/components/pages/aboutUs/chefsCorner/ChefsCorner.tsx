@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from './chefsCorner.module.css';
 import { signatureDishes } from '@/data/data';
 import chef from '@/assets/images/aboutUsImages/chef.svg';
-import Button from '@/components/lvl2/button/Button';
+import { LinkButton } from '@/components/lvl2/button/Button';
 import ImageComponent from '@/components/lvl2/image/Image';
 
 
@@ -43,7 +43,7 @@ export default function ChefsCorner() {
 
         <div className={styles.ctaSection}>
           <h2>A GLIMPSE OF OUR WORLD</h2>
-          <Button href='/gallery/tour' text={'More pictures'} marginTop={'0'}/>
+          <LinkButton href='/gallery/tour' text={'More pictures'} marginTop={'0'}/>
         </div>
       </Section>
     </>

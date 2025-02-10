@@ -3,7 +3,7 @@ import { Section } from '@/components/lvl1/section/Section';
 import styles from './hero.module.css';
 import restaurantView from '@/assets/images/aboutUsImages/restaurantView.svg';
 import ImageComponent from '@/components/lvl2/image/Image';
-import Button from '@/components/lvl2/button/Button';
+import { LinkButton } from '@/components/lvl2/button/Button';
 
 export default function Hero() {
   return (
@@ -21,7 +21,7 @@ export default function Hero() {
 
         <div className={styles.ctaSection}>
           <h2>Step into our world</h2>
-          <Button href='gallery/tour' text='More Pictures' marginTop={'0'} />
+          <LinkButton href='gallery/tour' text='More Pictures' marginTop={'0'} />
         </div>
       </Section>
     </>
