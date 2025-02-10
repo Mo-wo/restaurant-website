@@ -24,7 +24,7 @@ interface LinkButtonProps extends LinkProps {
   marginTop?: string;
 }
 
-export const LinkButton: React.FC<LinkButtonProps> = ({ text, href, linkProps,  linkStyle, marginTop }) => {
+export const LinkButton: React.FC<LinkButtonProps> = ({ text, href, linkStyle, marginTop, ...linkProps}) => {
   return (
     <Link href={href} className={`${styles.link} ${linkStyle}`} style={{marginTop: marginTop ?? '50px'}} {...linkProps}>
       {text}

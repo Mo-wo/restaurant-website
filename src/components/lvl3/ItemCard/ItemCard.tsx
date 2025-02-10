@@ -1,7 +1,8 @@
 import styles from './itemCard.module.css';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import { LinkButton } from '@/components/lvl2/button/Button';
+import ImageComponent from '@/components/lvl2/image/Image';
 
 
 interface ItemCardProps {
@@ -26,25 +27,23 @@ export const ItemCard: React.FC<ItemCardProps> = ({
   return (
     <div role='complementary' className={`${styles.cardWrapper} ${cardStyle}`} data-aos='fade-up' data-aos-offset='50'>
       {cardImgSrc &&
-        <div className={`${styles.imgWrapper} ${cardImgWrapperStyle}`}>
-          <Image src={cardImgSrc} alt={cardHeading ?? ''} className={`${styles.img} ${cardImgStyle}`} />
-        </div>
+        <ImageComponent src={cardImgSrc} alt={cardHeading ?? ''} className={`${styles.imgWrapper} ${cardImgWrapperStyle}`} />
       }
-      {cardHeading && <div role='complementary' className={`${styles.cardTextWrapper} ${cardTextWrapperStyle}`}>
-        {heading ? (
-          <h2 className={styles.cardHeading}>{cardHeading}</h2>
-        ) : (
-          <h3 className={styles.cardHeading}>{cardHeading}</h3>
-        )}
-        {cardInfo && <p className={styles.cardInfoText}>{cardInfo}</p>}
-      </div>}
+      {cardHeading &&
+        <div role='complementary' className={`${styles.cardTextWrapper} ${cardTextWrapperStyle}`}>
+          {heading ? (
+            <h2 className={styles.cardHeading}>{cardHeading}</h2>
+          ) : (
+            <h3 className={styles.cardHeading}>{cardHeading}</h3>
+          )}
+          {cardInfo && <p className={styles.cardInfoText}>{cardInfo}</p>}
+        </div>}
 
-      {showBtn && <div className={btnStyle}>
-        <LinkButton />
-        {/* <button className={styles.btn}>
-          <Link href={btnPath ?? '/menu'} passHref legacyBehavior><a>{btnText ?? 'View Details'}</a></Link>
-        </button> */}
-      </div>}
+
+
+      {showBtn &&
+        <LinkButton href={btnPath ?? '/menu'} text={'View Details'} linkStyle={btnStyle} marginTop={0} />
+      }
 
     </div>
   )
