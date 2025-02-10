@@ -1,28 +1,33 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { ButtonHTMLAttributes } from 'react';
+import Link, { LinkProps } from 'next/link';
 import styles from './button.module.css';
 
 
-interface ButtonProps {
+interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'style'>  {
   text: string;
-  href: string;
-  buttonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
   btnStyle?: string;
   marginTop?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, href, buttonProps, btnStyle, marginTop }) => {
+export const Button: React.FC<ButtonProps> = ({ text, btnStyle, marginTop, ...buttonProps }) => {
   return (
     <button className={`${styles.button} ${btnStyle}`} style={{marginTop: marginTop ?? '50px'}} {...buttonProps}>
-      {href ? (
-        <Link href={href}>
-          {text}
-        </Link>
-      ) : (
-        text
-      )}
+      {text}
     </button>
   );
 };
 
-export default Button;
+interface LinkButtonProps extends LinkProps {
+  text: string;
+  href: string;
+  linkStyle?: string;
+  marginTop?: string;
+}
+
+export const LinkButton: React.FC<LinkButtonProps> = ({ text, href, linkProps,  linkStyle, marginTop }) => {
+  return (
+    <Link href={href} className={`${styles.link} ${linkStyle}`} style={{marginTop: marginTop ?? '50px'}} {...linkProps}>
+      {text}
+    </Link>
+  );
+};

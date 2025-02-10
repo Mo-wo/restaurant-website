@@ -2,6 +2,7 @@ import { HomeBanner } from '@/components/lvl2/banner/homeBanner/HomeBanner';
 import styles from './hero.module.css';
 import homeheroimage from '@/assets/images/homeheroimage.svg';
 import Link from 'next/link';
+import { LinkButton } from '@/components/lvl2/button/Button';
 
 
 export default function Hero() {
@@ -17,9 +18,7 @@ export default function Hero() {
           <h1>WHERE <br /> FLAVOUR  <br /> MEETS DELIGHT</h1>
           <p>Experience the perfect blend of fresh ingredients, bold flavors, and unforgettable moments at every bite</p>
 
-          <button>
-            <Link href='/menu' passHref legacyBehavior>View our menu</Link>
-          </button>
+          <LinkButton href='/menu' text='View our menu'/>
         </article>
       </HomeBanner>
     </section>

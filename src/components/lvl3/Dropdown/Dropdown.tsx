@@ -9,14 +9,10 @@ type DropdownProps = {
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({data, onItemClick, className}) => {
-
-  // const handleClick = (path: string) => {
-  //     onItemClick();
-  // };
   return (
     <ul className={`${styles.dropdownWrapper} ${className}`}>
       {data.map((item, index) => (
-        <li className={styles.dropdownItem}>
+        <li className={styles.dropdownItem} key={index.toString()}>
           <Link href={item.path} key={index.toString()} onClick={onItemClick}>
             {item.name}
           </Link>

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+
 interface ItemCardProps {
   cardStyle?: string;
   cardImgWrapperStyle?: string;
@@ -39,9 +40,10 @@ export const ItemCard: React.FC<ItemCardProps> = ({
       </div>}
 
       {showBtn && <div className={btnStyle}>
-        <button className={styles.btn}>
+        <LinkButton />
+        {/* <button className={styles.btn}>
           <Link href={btnPath ?? '/menu'} passHref legacyBehavior><a>{btnText ?? 'View Details'}</a></Link>
-        </button>
+        </button> */}
       </div>}
 
     </div>

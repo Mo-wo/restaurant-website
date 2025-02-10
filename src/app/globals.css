@@ -127,7 +127,7 @@ p {
   line-height: var(--line-height-medium);
 }
 
-input, button {
+input, button, a {
   font-family: var(--font-family);
 }
 
@@ -163,9 +163,10 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: background-color 0.5s ease-in-out;
 }
 
-button > a {
+/* button > a {
   color: var(--color-primary);
   width: 100%;
   height: 100%;
@@ -175,11 +176,10 @@ button > a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  transition: background-color 0.5s ease-in-out;
-}
+} */
 
-button > a:hover {
-  background-color: #00000020;
+button:hover {
+  background-color: #ef3315;
 }
 
 input {

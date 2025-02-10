@@ -12,14 +12,21 @@ import { useModalStore } from '@/context/navContext';
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Dropdown } from '@/components/lvl3/Dropdown/Dropdown';
 import { galleryDropdownData, menuDropdownData, navItems } from '@/data/data';
+import { Button, LinkButton } from '@/components/lvl2/button/Button';
 
 
 export const Navbar = () => {
   const pathname = usePathname();
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(path);
+  };
   const [closeNav, setCloseNav] = useState<boolean>(false);
   const { isModalOpen, openModal, closeModal } = useModalStore();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
 
   const handleDropdownOpen = (dropdownId: string) => {
     setActiveDropdown((prev) => (prev === dropdownId ? null : dropdownId));
@@ -27,7 +34,6 @@ export const Navbar = () => {
 
   const handleDropdownClose = () => {
     setActiveDropdown(null);
-    handleNavClose();
   };
 
   const handleNavClose = () => {
@@ -35,10 +41,16 @@ export const Navbar = () => {
     handleDropdownClose();
   };
 
+  const handleLinkCLick = (path: string) => {
+    handleNavClose();
+  }
+
   const handleReservationClick = () => {
     setCloseNav(!closeNav);
     openModal();
   };
+
+
 
   return (
     <>
@@ -51,8 +63,7 @@ export const Navbar = () => {
           {navItems.map((item, index) => (
             <React.Fragment key={item.id}>
               {item.path === '/reservation' ? (
-                <button className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}>{item.name}
-                </button>
+                <Button text={item.name} className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}  />
               ) : (
                 <li
                   key={item.id}
@@ -83,9 +94,7 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        {<button className={styles.deskTopButton}>
-          <Link href='#reservation' passHref legacyBehavior><a >Reservation</a></Link>
-        </button>}
+        <LinkButton href='#reservation' text='Reservation' linkStyle={styles.deskTopButton} marginTop={0} />
 
         <div className={styles.menuWrapper} onClick={handleNavClose}>
           <span className={`${closeNav ? styles.line1 : styles.line} ${styles.lineColour}`}></span>

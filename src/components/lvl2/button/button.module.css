@@ -1,3 +1,25 @@
 .button {
   margin-top: var(--spacing-buttom);
 }
+
+.link {
+  border-radius: var(--border-radius);
+  font-size: var(--text-regular);
+  background-color: var(--color-tertiary);
+  width: var(--button-width-desktop);
+  height: var(--button-height);
+  color: var(--color-primary);
+  font-weight: var(--weight-semi-bold);
+  border: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: var(--spacing-buttom);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.link:hover {
+  background-color: #ef3315;
+}

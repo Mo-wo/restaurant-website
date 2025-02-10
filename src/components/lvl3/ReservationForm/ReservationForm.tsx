@@ -1,3 +1,4 @@
+import { Button } from '@/components/lvl2/button/Button';
 import styles from './reservationform.module.css';
 
 
@@ -33,7 +34,7 @@ export const ReservationForm = () => {
           <input className={styles.input} type='number' id='guests' name='guests' />
         </div>
 
-        <button type='submit' className={styles.formBtn}>Book now</button>
+        <Button text='Book Now' type='submit' className={styles.formBtn} />
       </div>
     </form>
   );
