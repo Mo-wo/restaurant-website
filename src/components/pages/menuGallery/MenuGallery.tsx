@@ -45,9 +45,7 @@ export default function MenuGallery() {
   return (
     <Section color='white' contentContainerStyle={styles.galleryWrapper}>
       {galleryItems.map((item, index) => (
-
-        <ImageComponent key={index.toString()} src={item.img} alt={''} className={`${styles.menuImg} ${styles[`menuImg${item.id}`]}`} />
-        // <img key={index.toString()} src={item.img} alt={''} className={`${styles.menuImg} ${styles[`menuImg${index}`]}`} />
+        <ImageComponent key={index.toString()} src={item.img} alt={''} className={`${styles.imgWrapper} ${styles[`imgWrapper${item.id}`]}`} />
       ))}
     </Section>
   )

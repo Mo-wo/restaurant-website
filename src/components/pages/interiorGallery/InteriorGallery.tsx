@@ -9,6 +9,7 @@ import interior7 from '@/assets/images/interior/interiorGallery/interior7.svg';
 import interior8 from '@/assets/images/interior/interiorGallery/interior8.svg';
 import interior9 from '@/assets/images/interior/interiorGallery/interior9.svg';
 import interior10 from '@/assets/images/interior/interiorGallery/interior10.svg';
+import interior11 from '@/assets/images/interior/interiorGallery/interior11.svg';
 import ImageComponent from '@/components/lvl2/image/Image';
 import styles from './interiorGallery.module.css';
 import { Section } from '@/components/lvl1/section/Section';
@@ -25,12 +26,12 @@ export const InteriorGallery = () => {
     {id: '8', img: interior8},
     {id: '9', img: interior9},
     {id: '10', img: interior10},
+    {id: '11', img: interior11},
   ]
   return (
     <Section color='white' contentContainerStyle={styles.galleryWrapper}>
       {galleryItems.map((item, index) => (
-        <ImageComponent key={index.toString()} src={item.img} alt={''} className={`${styles.menuImg} ${styles[`menuImg${item.id}`]}`} />
-        // <img key={index.toString()} src={item.img} alt={''} className={`${styles.menuImg} ${styles[`menuImg${index}`]}`} />
+        <ImageComponent key={index.toString()} src={item.img} alt={''} className={`${styles.imgWrapper} ${styles[`imgWrapper${item.id}`]}`} />
       ))}
     </Section>
   )

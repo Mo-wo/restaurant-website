@@ -178,7 +178,7 @@
     color: var(--color-white);
   }
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 870px) {
   .deskTopButton {
     width: var(--button-width-desktop);
   }
