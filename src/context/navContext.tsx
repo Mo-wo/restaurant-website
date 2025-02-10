@@ -13,15 +13,14 @@ export const useModalStore = create<ModalState>((set) => ({
   closeModal: () => set({ isModalOpen: false }),
 }));
 
-// interface DropdownState {
-//   activeDropdown: string | null;
-//   // openDropdo
-//   openDropdown: (id: string) => void;
-//   closeDropdown: () => void;
-// }
+interface DropdownState {
+  showDropdown: boolean;
+  toggleDropdown: () => void;
+  closeDropdown: () => void;
+}
 
-// export const useDropdownStore = create<DropdownState>((set) => ({
-//   activeDropdown: null,
-//   openDropdown: (id) => set((state) => ({ activeDropdown: state.activeDropdown === id ? null : id })),
-//   closeDropdown: () => set({ activeDropdown: null }),
-// }));
+export const useDropdownStore = create<DropdownState>((set) => ({
+  showDropdown: false,
+  toggleDropdown: () => set((state) => ({ showDropdown: !state.showDropdown })),
+  closeDropdown: () => set({ showDropdown: false }),
+}));

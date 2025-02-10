@@ -4,15 +4,15 @@ import Link from 'next/link';
 
 type DropdownProps = {
   data: {id: string, name: string, path: string}[];
-  onItemClick: () => void;
+  onItemClick?: () => void;
   className?: string;
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({data, onItemClick, className}) => {
-  const handleClick = (item: string) => {
-    onItemClick(item);
-  }
 
+  // const handleClick = (path: string) => {
+  //     onItemClick();
+  // };
   return (
     <ul className={`${styles.dropdownWrapper} ${className}`}>
       {data.map((item, index) => (

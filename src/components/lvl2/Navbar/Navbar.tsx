@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { usePathname } from 'next/navigation'
 import Image from 'next/image';
 import logo from '@/assets/images/logo.svg';
@@ -20,25 +20,9 @@ export const Navbar = () => {
   const [closeNav, setCloseNav] = useState<boolean>(false);
   const { isModalOpen, openModal, closeModal } = useModalStore();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        handleDropdownClose();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   const handleDropdownOpen = (dropdownId: string) => {
-    setActiveDropdown(dropdownId);
+    setActiveDropdown((prev) => (prev === dropdownId ? null : dropdownId));
   };
 
   const handleDropdownClose = () => {
@@ -72,17 +56,23 @@ export const Navbar = () => {
                 <button className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}>{item.name}
                 </button>
               ) : (
-                <li key={item.id} className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
-                  <Link href={item.path}>{item.name}</Link>
+                <li
+                  key={item.id}
+                  className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
+                  <Link
+                    href={item.path}>{item.name}
+                  </Link>
                   {(item.id === 2 || item.id === 3) && (
                     <>
-                      <span onMouseEnter={() => handleDropdownOpen(item.name)}
-          // onMouseLeave={handleDropdownClose}
-          ref={dropdownRef}
-
-                        // onClick={() => openDropdown(item.name)}
-                        className={styles.dropdownWrapper}><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} /></span>
-                      <Dropdown data={item.id === 2 ? menuDropdownData : galleryDropdownData} onItemClick={handleDropdownClose} className={activeDropdown === item.name ? styles.showDropdown : styles.hideDropdown} />
+                      <span
+                        onClick={() => handleDropdownOpen(item.name)}
+                        className={styles.dropdownWrapper}><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} />
+                        </span>
+                        <Dropdown
+                          data={item.id === 2 ? menuDropdownData : galleryDropdownData}
+                          onItemClick={handleDropdownClose}
+                          className={activeDropdown === item.name ? styles.showDropdown : styles.hideDropdown}
+                        />
                     </>
                   )}
                 </li>
