@@ -10,7 +10,7 @@ import signatureDish2 from '@/assets/images/aboutUsImages/signatureDish2.svg';
 export const navItems = [
   { id: 1, name: 'Home', path: '/' },
   { id: 2, name: 'Menu', path: '/menu' },
-  { id: 3, name: 'Gallery', path: '/gallery' },
+  { id: 3, name: 'Gallery', path: '/gallery/menu' },
   { id: 4, name: 'About us', path: '/about-us' },
   { id: 5, name: 'Contact', path: '/contact' },
   { id: 6, name: 'Reservation', path: '/reservation' }

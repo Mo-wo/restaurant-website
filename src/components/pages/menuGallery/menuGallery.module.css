@@ -1,31 +1,27 @@
 .galleryWrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: 20px;
+  /* align-content: center; */
+  /* justify-content: center; */
   gap: 20px;
 }
 
 .menuImg {
   display: inline;
-  align-items: flex-start;
-  /* justify-content: flex-start; */
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 100% !important;
-  /* transition: transform 0.3s; */
+  /* grid-row: span 1; */
 }
 
 .menuImg img {
   display: inline;
   width: 100%;
-  height: 100%;
-  aspect-ratio: auto;
-}
-
-.menuImg:hover {
-  /* transform: translateY(-10px); */
+  height: 100% !important;
+  object-fit: cover;
 }
 
 .menuImg1 { grid-row: span 6; border: 3px solid blue }
@@ -46,3 +42,41 @@
 .menuImg16 { grid-row: span 6; border: 3px solid cornflowerblue }
 .menuImg17 { grid-row: span 6; border: 3px solid darkred }
 .menuImg18 { grid-row: span 6; border: 3px solid blueviolet }
+
+
+
+@media screen and (min-width: 466px) {
+  .menuImg15 { grid-row: span 9; border: 3px solid crimson }
+  .menuImg16 { grid-row: span 6; border: 3px solid cornflowerblue }
+  .menuImg17 { grid-row: span 9; border: 3px solid darkred }
+  .menuImg18 { grid-row: span 6; border: 3px solid blueviolet }
+}
+
+@media screen and (min-width: 686px) {
+  .galleryWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+  .menuImg1 { grid-column: span 2; grid-row: span 6; }
+  .menuImg2 { grid-column: span 2; grid-row: span 6; }
+  .menuImg3 { grid-column: span 3; grid-row: span 9; }
+
+  .menuImg4 { grid-column: span 4; grid-row: span 9; }
+  .menuImg5 { grid-column: span 3; grid-row: span 6; }
+  .menuImg6 { grid-column: span 3; grid-row: span 6; }
+
+  .menuImg7 { grid-column: span 2; grid-row: span 6; }
+  .menuImg8 { grid-column: span 2; grid-row: span 6; }
+  .menuImg9 { grid-column: span 4; grid-row: span 9; }
+
+  .menuImg10 { grid-column: span 3; grid-row: span 9; }
+  .menuImg11{ grid-column: span 2; grid-row: span 6; }
+  .menuImg12 { grid-column: span 2; grid-row: span 6; }
+
+  .menuImg13 { grid-column: span 3; grid-row: span 9; }
+  .menuImg14{ grid-column: span 4; grid-row: span 9; }
+  .menuImg15 { grid-column: span 3; grid-row: span 6; }
+
+  .menuImg16 { grid-column: span 2; grid-row: span 9; }
+  .menuImg17{ grid-column: span 3; grid-row: span 9; }
+  .menuImg18 { grid-column: span 2; grid-row: span 9; }
+}

@@ -27,20 +27,18 @@ export const Navbar = () => {
 
   const handleDropdownClose = () => {
     setActiveDropdown(null);
+    handleNavClose();
   };
 
   const handleNavClose = () => {
     setCloseNav(!closeNav);
+    handleDropdownClose();
   };
 
   const handleReservationClick = () => {
     setCloseNav(!closeNav);
     openModal();
   };
-
-  const handleItemClick = (item: string) => {
-    console.log('Selected item:', item);
-  }
 
   return (
     <>
@@ -58,13 +56,17 @@ export const Navbar = () => {
               ) : (
                 <li
                   key={item.id}
-                  className={isActive(item.path) ? styles.active : styles.li} onClick={handleNavClose}>
+                  className={isActive(item.path) ? styles.active : styles.li}
+                  >
                   <Link
-                    href={item.path}>{item.name}
+                    href={item.path}
+                    onClick={handleNavClose}
+                    >{item.name}
                   </Link>
                   {(item.id === 2 || item.id === 3) && (
                     <>
                       <span
+                        onMouseEnter={() => handleDropdownOpen(item.name)}
                         onClick={() => handleDropdownOpen(item.name)}
                         className={styles.dropdownWrapper}><IoMdArrowDropdown size={20} color={'white'} className={styles.dropdown} />
                         </span>

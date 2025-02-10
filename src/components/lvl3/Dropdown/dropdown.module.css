@@ -6,11 +6,12 @@
   gap: var(--spacing-medium);
   position: absolute;
   top: 40px;
-  left: 0;
+  right: 0;
   padding: 10px 20px;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: none;
+  z-index: 3000;
 }
 
 .dropdownItem {
