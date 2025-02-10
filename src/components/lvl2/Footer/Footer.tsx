@@ -9,6 +9,7 @@ import { RiMailSendLine } from "react-icons/ri";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiSmartphone } from "react-icons/gi";
 import { useModalStore } from '@/context/navContext';
+import ImageComponent from '../image/Image';
 
 const Footer: React.FC = () => {
     const { isModalOpen} = useModalStore();
@@ -20,7 +21,7 @@ const Footer: React.FC = () => {
       {!isModalOpen && <section className={styles.footerTop} id='reservation'>
         <div role={'complementary'} className={styles.imgLeft}>
         </div>
-      <ReservationForm />
+        <ReservationForm />
         <div role={'complementary'} className={styles.imgRight}>
         </div>
       </section>}
@@ -28,9 +29,7 @@ const Footer: React.FC = () => {
       {/* Contact and opening hours section */}
       <section className={styles.footerBottom}>
         <div role={'complementary'} className={styles.footerBottomLeftWrapper}>
-          <div role={'complementary'} className={styles.logoWrapper}>
-            <Image src={logo} alt={`${app_text.name}-logo`} className={styles.logo} />
-          </div>
+          <ImageComponent src={logo} alt={`${app_text.name}-logo`} className={styles.logoWrapper} />
            <p>We&apos;re passionate about crafting unforgettable dining experiences. From our flavorful dishes to our warm hospitality, every detail is designed to delight. Visit us and savor the difference!</p>
         </div>
 
