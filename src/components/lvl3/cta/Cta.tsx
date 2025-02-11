@@ -1,7 +1,6 @@
 import React from 'react';
 import { LinkButton } from '@/components/lvl2/button/Button';
 import styles from './cta.module.css';
-import { Section } from '@/components/lvl1/section/Section';
 
 interface CtaProps {
   headingText: string;
