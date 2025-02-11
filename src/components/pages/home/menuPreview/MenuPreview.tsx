@@ -21,7 +21,6 @@ export const MenuPreview = () => {
           btnPath={'/gallery'}
           btnText={'More Pictures'}
           cardTextWrapperStyle={styles.cardTextWrapperMenu}
-          btnStyle={styles.cardBtnMenu}
         />
         <ItemCard
           cardStyle={styles.cardWrapperMenu}

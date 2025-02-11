@@ -36,13 +36,19 @@ export const ItemCard: React.FC<ItemCardProps> = ({
             <h3 className={styles.cardHeading}>{cardHeading}</h3>
           )}
           {cardInfo && <p className={styles.cardInfoText}>{cardInfo}</p>}
+          {showBtn &&
+            <LinkButton
+              href={btnPath ?? '/menu'}
+              text={'View Details'}
+              linkStyle={btnStyle}
+              // marginTop='0'
+            />
+          }
         </div>}
 
 
 
-      {showBtn &&
-        <LinkButton href={btnPath ?? '/menu'} text={'View Details'} linkStyle={btnStyle} marginTop={'0'} />
-      }
+
 
     </div>
   )

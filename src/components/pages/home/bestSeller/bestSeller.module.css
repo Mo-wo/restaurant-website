@@ -24,7 +24,6 @@
 
 .cardWrapper p {
   max-width: 60%;
-  height: 100px;
 }
 
 @media screen and (min-width: 980px) {
@@ -40,5 +39,6 @@
   .cardWrapper p {
     width: 100%;
     max-width: 400px;
+  height: 100px;
   }
 }
