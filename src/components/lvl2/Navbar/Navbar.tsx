@@ -14,7 +14,6 @@ import { galleryDropdownData, menuDropdownData, navItems } from '@/data/data';
 import { Button, LinkButton } from '@/components/lvl2/button/Button';
 import ImageComponent from '../image/Image';
 
-
 export const Navbar = () => {
   const pathname = usePathname();
   const isActive = (path: string) => {

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
-import { Navbar } from '@/components/lvl2/navbar/Navbar';
+// import { Navbar } from '@/components/lvl2/navbar/Navbar';
+import { Navbar } from '../../src/components/lvl2/navbar/Navbar';
 import { app_text } from '@/constants/constants';
 import Head from 'next/head';
 import AOSInitializer from './AOSInitialiser';
