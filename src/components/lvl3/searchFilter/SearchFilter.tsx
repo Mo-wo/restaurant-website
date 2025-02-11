@@ -8,18 +8,20 @@ export const SearchFilter = () => {
   return (
     <section className={styles.searchSection}>
       <div className={styles.searchWrapper}>
-        <BiSearch />
+        <BiSearch size={20} />
         <label htmlFor='search'>
-          <input name='search' id='search' type='text' className={styles.searchInput} />
+          <input name='search' id='search' type='text' placeholder='Search' className={styles.searchInput} />
         </label>
       </div>
 
       <div className={styles.filterWrapper}>
-        <IoFilter />
+        <IoFilter size={20} />
+        <div className={styles.buttonWrapper}>
         <button className={styles.textButton}>Price</button>
         <button className={styles.textButton}>Popular</button>
         <button className={styles.textButton}>Newest</button>
-      </div>
+        </div>
+        </div>
     </section>
   )
 }

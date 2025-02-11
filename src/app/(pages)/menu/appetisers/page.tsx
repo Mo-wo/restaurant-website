@@ -6,8 +6,8 @@ export default function AppetisersPage() {
   return (
     <>
       <PageBanner
-        heading={'APPETIZERS TO TEMPT YOUR TASTE BUDS'}
-        desc={'Start your meal right with our carefully crafted appetizers, full of flavor and freshness'}
+        heading={'APPETISERS TO TEMPT YOUR TASTE BUDS'}
+        desc={'Start your meal right with our carefully crafted appetisers, full of flavor and freshness'}
         />
         <Appetisers />
     </>
