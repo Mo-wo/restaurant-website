@@ -107,6 +107,81 @@ export const team = [
   },
 ];
 
+export const leaders = [
+  {
+    id: '1',
+    name: 'Adekunle Bamidele',
+    title: 'Founder & CEO',
+    image: staff1
+  },
+  {
+    id: '2',
+    name: 'EMIL CARTER',
+    title: 'General Manager',
+    image: staff2
+  },
+  {
+    id: '3',
+    name: 'OLIVIA PEREZ',
+    title: 'Hospitality Coordinator',
+    image: staff5
+  }
+];
+
+export const chefs = [
+  {
+    id: '1',
+    name: 'JAMES LAWSON',
+    title: 'Head Chef',
+    image: staff1
+  },
+  {
+    id: '2',
+    name: 'NGOZI EZE',
+    title: 'Grill Specialist',
+    image: staff2
+  },
+  {
+    id: '3',
+    name: 'MICHAEL BROOKS',
+    title: 'Sous Chef',
+    image: staff4
+  },
+  {
+    id: '4',
+    name: 'AYO BALOGUN',
+    title: 'Dessert Chef',
+    image: staff3
+  },
+  {
+    id: '5',
+    name: 'FUNMI OLATUNJI',
+    title: 'Pastry Chef',
+    image: staff5
+  },
+];
+
+export const staff = [
+  {
+    id: '1',
+    name: 'JOHNSON ADENIYI',
+    title: 'Lead Server',
+    image: staff1
+  },
+  {
+    id: '3',
+    name: 'MUSA ABDULLAHI',
+    title: 'Bartender',
+    image: staff4
+  },
+  {
+    id: '5',
+    name: 'JULIET OKORO',
+    title: 'Kitchen Assistant',
+    image: staff5
+  },
+];
+
 
 export const signatureDishes = [
   {

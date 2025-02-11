@@ -68,7 +68,7 @@
     max-width: 26%;
   }
 
-  .wrapper:nth-child(2), .wrapper:nth-child(5) {
+  .wrapper:nth-child(2) {
     transform: translateY(var(--spacing-xxxl))
   }
 
