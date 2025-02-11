@@ -18,7 +18,7 @@ interface MenuCardProps {
 }
 
 export const MenuCard: React.FC<MenuCardProps> = ({
-  cardStyle, cardImgWrapperStyle, cardImgSrc, cardImgStyle, cardTextWrapperStyle, title,
+  cardStyle, cardImgWrapperStyle, cardImgSrc, cardTextWrapperStyle, title,
 }) => {
 
   return (
