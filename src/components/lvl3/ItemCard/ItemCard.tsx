@@ -1,5 +1,4 @@
 import styles from './itemCard.module.css';
-import Image from 'next/image';
 import React from 'react';
 import { LinkButton } from '@/components/lvl2/button/Button';
 import ImageComponent from '@/components/lvl2/image/Image';
@@ -21,7 +20,7 @@ interface ItemCardProps {
 }
 
 export const ItemCard: React.FC<ItemCardProps> = ({
-  cardStyle, cardImgWrapperStyle, cardImgSrc, cardImgStyle, cardTextWrapperStyle, cardHeading, cardInfo, btnStyle, btnPath, btnText, showBtn, heading
+  cardStyle, cardImgWrapperStyle, cardImgSrc, cardTextWrapperStyle, cardHeading, cardInfo, btnStyle, btnPath, showBtn, heading
 }) => {
 
   return (
@@ -42,7 +41,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 
 
       {showBtn &&
-        <LinkButton href={btnPath ?? '/menu'} text={'View Details'} linkStyle={btnStyle} marginTop={0} />
+        <LinkButton href={btnPath ?? '/menu'} text={'View Details'} linkStyle={btnStyle} marginTop={'0'} />
       }
 
     </div>

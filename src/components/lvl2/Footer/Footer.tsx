@@ -2,7 +2,6 @@
 import React from 'react';
 import styles from './footer.module.css';
 import { ReservationForm } from '@/components/lvl3/reservationForm/ReservationForm';
-import Image from 'next/image';
 import logo from '@/assets/images/logo.svg';
 import { app_text } from '@/constants/constants';
 import { RiMailSendLine } from "react-icons/ri";

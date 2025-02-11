@@ -1,6 +1,5 @@
 import React from 'react'
 import { Section } from '@/components/lvl1/section/Section'
-import Image from 'next/image'
 import styles from './chefsCorner.module.css';
 import { signatureDishes } from '@/data/data';
 import chef from '@/assets/images/aboutUsImages/chef.svg';
@@ -13,7 +12,7 @@ export default function ChefsCorner() {
   return (
     <>
       <Section color={'white'}>
-        <h2 className={styles.h2}>Chef's Corner</h2>
+        <h2 className={styles.h2}>Chef&apos;s Corner</h2>
 
         <div className={styles.contentContainer}>
           <ImageComponent src={chef} alt={`${chef}'s-img`} className={styles.chefImage} />

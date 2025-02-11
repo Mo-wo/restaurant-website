@@ -6,7 +6,7 @@ interface FacebookIconProps {
   color?: string;
 }
 
-export const FacebookIcon: React.FC<FacebookIconProps> = ({ width, height, color }) => (
+export const FacebookIcon: React.FC<FacebookIconProps> = ({ width, height }) => (
 
   <svg width={width ?? "20"} height={height ?? "20"} viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M16.5 30C24.232 30 30.5 23.732 30.5 16C30.5 8.26801 24.232 2 16.5 2C8.76801 2 2.5 8.26801 2.5 16C2.5 23.732 8.76801 30 16.5 30Z" fill="url(#paint0_linear_123_4264)"/>

@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation'
-import Image from 'next/image';
 import logo from '@/assets/images/logo.svg';
 import styles from './navbar.module.css';
 import Link from 'next/link';
@@ -42,10 +41,6 @@ export const Navbar = () => {
     handleDropdownClose();
   };
 
-  const handleLinkCLick = (path: string) => {
-    handleNavClose();
-  }
-
   const handleReservationClick = () => {
     setCloseNav(!closeNav);
     openModal();
@@ -65,7 +60,7 @@ export const Navbar = () => {
                 <Button text={item.name} className={`${styles.reservation} ${styles.mobileButton}`} onClick={handleReservationClick}  />
               ) : (
                 <li
-                  key={item.id}
+                  key={index.toString()}
                   className={isActive(item.path) ? styles.active : styles.li}
                   >
                   <Link
@@ -93,7 +88,7 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <LinkButton href='#reservation' text='Reservation' linkStyle={styles.deskTopButton} marginTop={0} />
+        <LinkButton href='#reservation' text='Reservation' linkStyle={styles.deskTopButton} marginTop={'0'} />
 
         <div className={styles.menuWrapper} onClick={handleNavClose}>
           <span className={`${closeNav ? styles.line1 : styles.line} ${styles.lineColour}`}></span>

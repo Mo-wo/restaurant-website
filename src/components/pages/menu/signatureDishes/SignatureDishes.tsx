@@ -1,12 +1,11 @@
 import React from 'react';
 import { Section } from '@/components/lvl1/section/Section';
 import styles from './signatureDishes.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
 import chefsFavourite from '@/assets/images/menuItems/chefsFavourite.svg';
 import restaurantSignature from '@/assets/images/menuItems/restaurantSignature.svg';
 import specials from '@/assets/images/menuItems/specials.svg';
 import { MenuCard } from '@/components/lvl3/menuCard/MenuCard';
+import { LinkButton } from '@/components/lvl2/button/Button';
 
 
 export default function SignatureDishes() {
@@ -43,9 +42,7 @@ export default function SignatureDishes() {
     <Section sectionStyle={styles.section} contentContainerStyle={styles.orderSection} color={'white'}>
       <h2 data-aos='zoom-in' style={{marginBottom: 0}}>DON&apos;T JUST BROWSE - INDULGE</h2>
       <p data-aos='fade-up'>Order online for quick and delicious delivery straight to your door</p>
-      <button data-aos='zoom-in-up'>
-        <Link href="/menu">Order Now</Link>
-      </button>
+      <LinkButton href="/menu" text='Order Now' />
     </Section>
     </>
   )

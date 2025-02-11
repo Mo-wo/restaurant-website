@@ -1,5 +1,4 @@
 'use client'
-import { useState, useEffect } from "react";
 import styles from "./discountButton.module.css";
 
 export const DiscountButton = () => {

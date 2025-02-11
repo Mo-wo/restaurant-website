@@ -6,7 +6,7 @@ interface InstagramIconProps {
   color?: string;
 }
 
-export const InstagramIcon: React.FC<InstagramIconProps> = ({ width, height, color }) => (
+export const InstagramIcon: React.FC<InstagramIconProps> = ({ width, height }) => (
   <svg width={width ?? "20"} height={height ?? "20"} viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M24.5 2H8.5C5.18629 2 2.5 4.68629 2.5 8V24C2.5 27.3137 5.18629 30 8.5 30H24.5C27.8137 30 30.5 27.3137 30.5 24V8C30.5 4.68629 27.8137 2 24.5 2Z" fill="url(#paint0_radial_123_4269)"/>
 <path d="M24.5 2H8.5C5.18629 2 2.5 4.68629 2.5 8V24C2.5 27.3137 5.18629 30 8.5 30H24.5C27.8137 30 30.5 27.3137 30.5 24V8C30.5 4.68629 27.8137 2 24.5 2Z" fill="url(#paint1_radial_123_4269)"/>

@@ -1,6 +1,5 @@
+import ImageComponent from '@/components/lvl2/image/Image';
 import styles from './menuCard.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
 interface MenuCardProps {
@@ -24,9 +23,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
 
   return (
     <div role='complementary' className={`${styles.cardWrapper} ${cardStyle}`} data-aos='fade-up' data-aos-offset='50'>
-        <div className={`${styles.imgWrapper} ${cardImgWrapperStyle}`}>
-          <Image src={cardImgSrc} alt={title ?? ''} className={`${styles.img} ${cardImgStyle}`} />
-        </div>
+      <ImageComponent src={cardImgSrc} alt={title ?? ''} className={`${styles.imgWrapper} ${cardImgWrapperStyle}`} />
       <div role='complementary' className={`${styles.cardTextWrapper} ${cardTextWrapperStyle}`}>
           <p className={styles.cardHeading}>{title}</p>
       </div>

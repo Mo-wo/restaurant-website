@@ -1,8 +1,5 @@
 import React from 'react'
 import { Section } from '@/components/lvl1/section/Section'
-import Image from 'next/image'
-import Link from 'next/link'
-import { IoMdArrowDropright } from "react-icons/io";
 import styles from './leaders.module.css';
 import { team } from '@/data/data';
 import ImageComponent from '@/components/lvl2/image/Image';
