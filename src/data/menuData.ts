@@ -1,7 +1,8 @@
 // import appetiser1 from
 
-export const appetisers = [
-  {
+export const appetisers = {
+  totalPages: 10,
+  data: [{
     id: '1',
     img: require('../assets/images/menuCategories/appetiser1.svg'),
     name: 'Puff - Puff',
@@ -126,6 +127,5 @@ export const appetisers = [
     name: 'Spicy Asun',
     desc: 'Spicy, grilled, or barbecued goat meat dish',
     price: '1800.00'
-  },
-
-]
+  }],
+}
