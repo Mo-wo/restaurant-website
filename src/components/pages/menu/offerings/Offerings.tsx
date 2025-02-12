@@ -39,7 +39,7 @@ export default function Offerings() {
 
       <div className={styles.container}>
         {offerings.map((offering, index) => (
-          <Link href={'#'} key={index.toString()} className={styles.wrapper}  >
+          <Link href={`/menu/${offering.name.toLowerCase()}`} key={index.toString()} className={styles.wrapper}  >
             <div className={styles.imageWrapper} data-aos='fade-up'>
               <Image src={offering.imgSrc} alt={offering.name} className={styles.img} />
             </div>

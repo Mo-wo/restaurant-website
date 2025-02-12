@@ -3,18 +3,16 @@ import { Section } from '@/components/lvl1/section/Section'
 import { SearchFilter } from '../searchFilter/SearchFilter'
 import { MenuCategoryCard } from '../menuCategoryCard/MenuCategoryCard'
 import { Pagination } from '../pagination/Pagination'
-import { appetisers } from '@/data/menuData'
 
 type MenuCategoryPageProps = {
   pathname: string;
+  categoryData: any;
 }
 
-export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname }) => {
+export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, categoryData }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [appetisersData, setAppetisersData] = useState<any>(appetisers.data)
-  const itemsPerPage = appetisers.totalPages;
-
-  console.log(appetisersData)
+  // const [appetisersData, setAppetisersData] = useState<any>(categoryData.data)
+  const itemsPerPage = categoryData.totalPages;
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -30,7 +28,7 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname }) 
         onNewestFilter={() => undefined}
       />
       <section>
-        {appetisersData.map((item: any, index: number) => (
+        {categoryData.data.map((item: any, index: number) => (
           <MenuCategoryCard key={index.toString()} item={item} pathname={pathname} />
         ))}
       </section>

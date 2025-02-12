@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 export default function Categories() {
 
-  const offerings = [
+  const categories = [
     {
       id: '1',
       imgSrc: breakfast,
@@ -32,12 +32,12 @@ export default function Categories() {
       <h2 className={styles.h2} data-aos="zoom-in">SAVOR EVERY MEAL, ANY TIME OF DAY</h2>
 
       <div className={styles.container}>
-        {offerings.map((offering, index) => (
-          <Link href='#' key={index.toString()} className={styles.wrapper} >
+        {categories.map((category, index) => (
+          <Link href={`/menu/${category.name.toLowerCase()}`} key={index.toString()} className={styles.wrapper} >
             <div className={styles.imageWrapper} data-aos='fade-up'>
-              <Image src={offering.imgSrc} alt={offering.name} className={styles.img} />
+              <Image src={category.imgSrc} alt={category.name} className={styles.img} />
             </div>
-            <p className={styles.text} data-aos='fade-up'>{offering.name}</p>
+            <p className={styles.text} data-aos='fade-up'>{category.name}</p>
           </Link>
         ))}
       </div>

@@ -32,10 +32,6 @@ export const Pagination: React.FC<PaginationProps> = ({ totalPages, currentPage,
     }
   };
 
-  const shouldShowEllipsis = (total: number) => {
-    return (total - 4) % 4 > 0;
-  };
-
   return (
     <div className={styles.paginationWrapper}>
       {currentPage > 4 && (
@@ -50,7 +46,7 @@ export const Pagination: React.FC<PaginationProps> = ({ totalPages, currentPage,
           {page}
         </button>
       ))}
-      {currentPage < totalPages - 4 && shouldShowEllipsis(totalPages) && (
+      {visiblePages[visiblePages.length - 1] < totalPages && (
         <button onClick={() => handlePageChange(visiblePages[visiblePages.length - 1] + 1)} className={styles.textButton}><IoEllipsisHorizontalSharp />
         </button>
       )}

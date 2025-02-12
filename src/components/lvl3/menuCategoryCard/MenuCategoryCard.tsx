@@ -23,7 +23,7 @@ export const MenuCategoryCard: React.FC<MenuCategoryCardProps & HTMLAttributes<H
           <p className={styles.desc}>{item.desc}</p>
           <p className={styles.price}>₦ {item.price}</p>
         </div>
-        <LinkButton href={''} text={'View Details'} linkStyle={styles.linkBtn} marginTop='0' />
+        <LinkButton href={`${pathname}/${item.name.toLowerCase().replace(/ /g, "-")}`} text={'View Details'} linkStyle={styles.linkBtn} marginTop='0' />
       </div>
     </div>
   )

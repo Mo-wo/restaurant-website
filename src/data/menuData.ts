@@ -1,18 +1,26 @@
-// import appetiser1 from
-
-export const appetisers = {
+export const menuData: Record<string, { 
+  totalPages: number;
+  data: {
+    id: string;
+    img: string;
+    name: string;
+    desc: string;
+    price: string;
+  }[]
+}> = {
+  appetisers: {
   totalPages: 10,
   data: [{
     id: '1',
     img: require('../assets/images/menuCategories/appetiser1.svg'),
-    name: 'Puff - Puff',
+    name: 'Puff Puff',
     desc: 'Soft, deep-fried dough balls, slightly crispy outside',
     price: '100.00'
   },
   {
     id: '2',
     img: require('../assets/images/menuCategories/appetiser2.svg'),
-    name: 'Chin - chin',
+    name: 'Chin chin',
     desc: 'Crunchy, bite-sized fried dough snack',
     price: '200.00'
   },
@@ -128,4 +136,4 @@ export const appetisers = {
     desc: 'Spicy, grilled, or barbecued goat meat dish',
     price: '1800.00'
   }],
-}
+}}
