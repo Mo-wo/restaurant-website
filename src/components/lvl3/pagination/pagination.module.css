@@ -1,0 +1,28 @@
+.paginationWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.paginationWrapper button {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--circle);
+}
+
+
+.paginationWrapper button:hover {
+  background: none;
+}
+
+.textButton {
+  background: none;
+  color: var(--color-text);
+}
+
+.activePage {
+  padding: 2px 10px;
+  transition: background-color 0.5s ease-in-out;
+}

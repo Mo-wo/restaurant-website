@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import styles from './searchFilter.module.css';
@@ -14,6 +15,7 @@ type SearchFilterProps = {
 export const SearchFilter:React.FC<SearchFilterProps> = ({ query, onSearch, onPriceFilter, onNewestFilter, onPopularFilter }) => {
   const [searchQuery, setSearchQuery] = useState<string>(query);
   const [filtercategory, setFilterCategory] = useState<string>('');
+  const [showFilter, setShowFilter] = useState<boolean>(false);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchQuery(e.target.value);
@@ -34,6 +36,10 @@ export const SearchFilter:React.FC<SearchFilterProps> = ({ query, onSearch, onPr
     onNewestFilter(filtercategory);
   };
 
+  const handleFilterClick = () => {
+    setShowFilter(!showFilter);
+  }
+
   return (
     <section className={styles.searchSection}>
       <div className={styles.searchWrapper}>
@@ -52,13 +58,13 @@ export const SearchFilter:React.FC<SearchFilterProps> = ({ query, onSearch, onPr
       </div>
 
       <div className={styles.filterWrapper}>
-        <IoFilter size={20} />
-        <div className={styles.buttonWrapper}>
-        <button className={styles.textButton} onClick={handlePriceFilter}>Price</button>
-        <button className={styles.textButton} onClick={handlePopularFilter}>Popular</button>
-        <button className={styles.textButton} onClick={handleNewestFilter}>Newest</button>
+        <button className={styles.textButton} onClick={handleFilterClick}><IoFilter size={20} /></button>
+        <div className={showFilter ? styles.buttonWrapper : styles.hideButtonWrapper}>
+          <button className={styles.textButton} onClick={handlePriceFilter}>Price</button>
+          <button className={styles.textButton} onClick={handlePopularFilter}>Popular</button>
+          <button className={styles.textButton} onClick={handleNewestFilter}>Newest</button>
         </div>
-        </div>
+      </div>
     </section>
   )
 }

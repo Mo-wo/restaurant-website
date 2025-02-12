@@ -50,7 +50,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <ImageComponent src={logo} alt={`${app_text.name}-logo`} className={styles.logoBg} role="img" aria-label={`${app_text.name}-logo-background`} />
+        <ImageComponent src={logo} alt={`${app_text.name}-logo`} className={styles.logoBg} role="img" aria-label={`${app_text.name}-logo-background`} animation='none' />
 
         <ul className={closeNav ? styles.ul : `${styles.ulClose}`}>
           {navItems.map((item, index) => (

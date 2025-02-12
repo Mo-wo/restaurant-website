@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
       {/* Contact and opening hours section */}
       <section className={styles.footerBottom}>
         <div role={'complementary'} className={styles.footerBottomLeftWrapper}>
-          <ImageComponent src={logo} alt={`${app_text.name}-logo`} className={styles.logoWrapper} />
+          <ImageComponent src={logo} alt={`${app_text.name}-logo`} className={styles.logoWrapper} animation='none' />
            <p>We&apos;re passionate about crafting unforgettable dining experiences. From our flavorful dishes to our warm hospitality, every detail is designed to delight. Visit us and savor the difference!</p>
         </div>
 

@@ -1,6 +1,6 @@
+import React from 'react';
 import ImageComponent from '@/components/lvl2/image/Image';
 import styles from './menuCard.module.css';
-import React from 'react';
 
 interface MenuCardProps {
   cardStyle?: string;
@@ -10,11 +10,6 @@ interface MenuCardProps {
   cardTextWrapperStyle?: string;
   heading?: boolean;
   title?: string;
-  // cardInfo?: string;
-  // showBtn?: boolean;
-  // btnStyle?: string;
-  // btnPath?: string;
-  // btnText?: string;
 }
 
 export const MenuCard: React.FC<MenuCardProps> = ({

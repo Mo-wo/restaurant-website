@@ -12,3 +12,4 @@ To-dos:
 5. Change all buttons to button component
 6. Change all components to named exports
 7. Change CTAs to components
+8. Change component interfaces to types
