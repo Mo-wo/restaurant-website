@@ -15,7 +15,7 @@ type MenuCategoryPageProps = {
 
 export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, categoryData, category }) => {
   const data = categoryData.data;
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [filterType, setFilterType] = useState<string>('');
   const [filteredData, setFilteredData] = useState<any>(null);
