@@ -63,7 +63,7 @@
 }
 
 .formBtn{
-  margin-top: var(--spacing-xl);
+  margin-top: var(--spacing-large) !important;
   align-self: center;
 }
 

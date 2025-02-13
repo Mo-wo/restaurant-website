@@ -50,7 +50,7 @@ export const SearchFilter:React.FC<SearchFilterProps> = ({ query, onSearch,onFil
 
       <div className={styles.filterWrapper}>
         <button className={styles.textButton} onClick={() => setShowFilter(!showFilter)}><IoFilter size={20} /></button>
-        <div className={showFilter ? styles.buttonWrapper : styles.hideButtonWrapper}>
+        <div className={showFilter ? styles.buttonWrapper : `${styles.buttonWrapper} ${styles.hideButtonWrapper}`}>
           <button className={activeFilter === 'price' ? styles.activeFilter : styles.textButton}  onClick={() => handleFilter('price')}>Price</button>
           <button className={activeFilter === 'popular' ? styles.activeFilter : styles.textButton} onClick={() => handleFilter('popular')}>Popular</button>
           <button className={activeFilter === 'new' ? styles.activeFilter : styles.textButton} onClick={() => handleFilter('new')}>Newest</button>

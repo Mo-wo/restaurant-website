@@ -34,7 +34,7 @@ export const ReservationForm = () => {
           <input className={styles.input} type='number' id='guests' name='guests' />
         </div>
 
-        <Button text='Book Now' type='submit' className={styles.formBtn} />
+        <Button text='Book Now' type='submit' className={styles.formBtn} marginTop='0' />
       </div>
     </form>
   );

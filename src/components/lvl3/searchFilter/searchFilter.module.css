@@ -77,10 +77,10 @@
 }
 
 
-@media screen and (min-width: 510px) {
+@media screen and (min-width: 680px) {
   .searchSection {
     justify-content: space-between;
-    gap: var(--spacing-medium);
+    gap: var(--spacing-xl);
   }
 
   .filterWrapper {
@@ -93,5 +93,9 @@
     box-shadow: none;
     background: none;
     padding: 0;
+  }
+
+  .hideButtonWrapper {
+    display: flex;
   }
 }
