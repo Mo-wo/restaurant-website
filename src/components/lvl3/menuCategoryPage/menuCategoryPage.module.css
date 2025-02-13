@@ -1,6 +1,7 @@
 .cardContainer, .noContentWrapper {
     justify-content: center;
 }
+
 .cardContainer {
     width: 100%;
     display: grid;
