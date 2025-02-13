@@ -4,6 +4,7 @@ import { Section } from '@/components/lvl1/section/Section';
 import { SearchFilter } from '../searchFilter/SearchFilter';
 import { MenuCategoryCard } from '../menuCategoryCard/MenuCategoryCard';
 import { Pagination } from '../pagination/Pagination';
+import styles from './menuCategoryPage.module.css';
 
 type MenuCategoryPageProps = {
   pathname: string;
@@ -36,7 +37,6 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
 
   const filteredSearchData = useMemo(() => {
     if (!searchQuery && !filterType) return data;
-    console.log('I ran', 'filterType', filterType)
 
     let filtered = [...data];
 
@@ -60,23 +60,20 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
     setFilteredData(filteredSearchData);
   }, [filteredSearchData]);
 
-  useEffect(() => {
-      if (currentPage > totalPages) {
-        setCurrentPage(Math.max(totalPages, 1));
-      }
-  }, [filteredData?.length, currentPage]);
 
-  const paginatedData = useMemo(() => {
-    if(!searchQuery && !filterType) return data;
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return filteredData?.slice(startIndex, endIndex);
-  }, [filteredData, currentPage]);
+  // useEffect(() => {
+  //     if (currentPage > totalPages) {
+  //       setCurrentPage(Math.max(totalPages, 1));
+  //     }
+  // }, [filteredData?.length, currentPage]);
 
+  // const paginatedData = useMemo(() => {
+  //   if(!searchQuery && !filterType) return data;
+  //   const startIndex = (currentPage - 1) * itemsPerPage;
+  //   const endIndex = startIndex + itemsPerPage;
+  //   return filteredData?.slice(startIndex, endIndex);
+  // }, [filteredData, currentPage]);
 
-  console.log('totalPages', totalPages);
-  console.log('currentPage', currentPage);
-  console.log(filteredData)
 
   return (
     <Section color='white'>
@@ -86,7 +83,7 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
         onFilterChange={handleFilterChange}
         activeFilter={filterType}
       />
-      <section>
+      <section className={styles.cardContainer}>
         {filteredData ? (
           <>
           {filteredData.map((item: any, index: number) => (

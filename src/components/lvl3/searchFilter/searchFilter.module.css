@@ -14,10 +14,14 @@
   border-radius: var(--border-radius);
 }
 
-.searchInput {
+.searchWrapper label {
   width: calc(100% - 30px);
-  background: none;
   margin-left: 10px;
+}
+
+.searchInput {
+  width: 100%;
+  background: none;
   border: none;
   outline: none;
 }
