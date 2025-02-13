@@ -1,9 +1,19 @@
+.cardContainer, .noContentWrapper {
+    justify-content: center;
+    align-items: center;
+}
 .cardContainer {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: 100px;
-    justify-content: center;
-    align-items: center;
     grid-gap: var(--spacing-xl);
+    min-height: 100vh;
+}
+
+.noContentWrapper {
+    width: 100%;
+    display: flex;
+    align-self: flex-start;
+    grid-column: span 5;
 }

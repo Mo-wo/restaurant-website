@@ -20,7 +20,7 @@ export default function MenuCategory() {
         heading={categoryData.heading}
         desc={categoryData.description}
         />
-        <MenuCategoryPage pathname={pathname} categoryData={categoryData} />
+        <MenuCategoryPage pathname={pathname} categoryData={categoryData} category={category as string} />
     </>
   )
 }

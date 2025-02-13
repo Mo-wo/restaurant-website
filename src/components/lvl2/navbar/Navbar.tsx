@@ -95,6 +95,7 @@ export const Navbar = () => {
           <span className={closeNav ? styles.line3 : `${styles.line} ${styles.lineColour}`}></span>
         </div>
       </nav>
+      
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <ReservationForm />
       </Modal>

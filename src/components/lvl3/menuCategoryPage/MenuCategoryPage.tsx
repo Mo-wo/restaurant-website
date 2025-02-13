@@ -5,14 +5,17 @@ import { SearchFilter } from '../searchFilter/SearchFilter';
 import { MenuCategoryCard } from '../menuCategoryCard/MenuCategoryCard';
 import { Pagination } from '../pagination/Pagination';
 import styles from './menuCategoryPage.module.css';
+import { ThreeDots } from 'react-loader-spinner'
 
 type MenuCategoryPageProps = {
   pathname: string;
   categoryData: any;
+  category: string
 }
 
-export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, categoryData }) => {
+export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, categoryData, category }) => {
   const data = categoryData.data;
+  const [loading, setLoading] = useState<boolean>(true);
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [filterType, setFilterType] = useState<string>('');
   const [filteredData, setFilteredData] = useState<any>(null);
@@ -53,11 +56,18 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
       filtered = filtered.sort((b: any, a: any) => a.price - b.price);
     }
 
+
     return filtered;
   }, [searchQuery, filterType, data]);
 
   useEffect(() => {
-    setFilteredData(filteredSearchData);
+    setLoading(true); 
+    const timeoutId = setTimeout(() => {
+      setFilteredData(filteredSearchData);
+      setLoading(false);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, [filteredSearchData]);
 
 
@@ -84,13 +94,26 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
         activeFilter={filterType}
       />
       <section className={styles.cardContainer}>
-        {filteredData ? (
+        {loading ? (
+          <div className={styles.noContentWrapper}>
+            <ThreeDots 
+              visible={loading}
+              height="80"
+              width="80"
+              color={'#FF6347'}
+              radius='9'
+              ariaLabel='three-dots-loading'
+              />
+          </div>
+          ) : filteredData?.length === 0 ? (
+          <div className={styles.noContentWrapper}>
+            <p>{category} menu coming soon</p>
+          </div>
+        ) : (
           <>
-          {filteredData.map((item: any, index: number) => (
+          {filteredData?.map((item: any, index: number) => (
           <MenuCategoryCard key={index.toString()} item={item} pathname={pathname} />))}
         </>
-        ) : (
-          <p>loading...</p>
         )}
       
       </section>
