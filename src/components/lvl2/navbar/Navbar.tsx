@@ -13,6 +13,7 @@ import { Dropdown } from "@/components/lvl3/Dropdown/Dropdown";
 import { galleryDropdownData, menuDropdownData, navItems } from "@/data/data";
 import { Button, LinkButton } from "@/components/lvl2/button/Button";
 import ImageComponent from "../image/Image";
+import cart from '@/assets/images/cart.svg';
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -117,7 +118,7 @@ export const Navbar = () => {
         
         <div className={styles.navButtonsDesktop}>
           <div className={styles.cartContainer}>
-              <ImageComponent src={require('../../../assets/images/cart.svg')} alt={"cart-image"} className={styles.imgWrapper} animation={'zoom-in'} onClick={goToCart} />
+              <ImageComponent src={cart} alt={"cart-image"} className={styles.imgWrapper} animation={'zoom-in'} onClick={goToCart} />
               <p className={styles.cartCounter} data-aos='zoom-in'><span>{90}</span></p>
           </div>
           <LinkButton
@@ -130,7 +131,7 @@ export const Navbar = () => {
 
         <div className={styles.navButtons}>
           <div className={styles.cartContainer}>
-                <ImageComponent src={require('../../../assets/images/cart.svg')} alt={"cart-image"} className={styles.imgWrapper} animation={'zoom-in'} onClick={goToCart} />
+                <ImageComponent src={cart} alt={"cart-image"} className={styles.imgWrapper} animation={'zoom-in'} onClick={goToCart} />
                 <p className={styles.cartCounter} data-aos='zoom-in'><span>{90}</span></p>
             </div>
           <div className={styles.menuWrapper} onClick={handleNavClose}>

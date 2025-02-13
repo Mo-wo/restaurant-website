@@ -1,3 +1,62 @@
+import breakfast1 from '@/assets/images/menuCategories/breakfast1.svg';
+import breakfast2 from '@/assets/images/menuCategories/breakfast2.svg';
+import breakfast3 from '@/assets/images/menuCategories/breakfast3.svg';
+import breakfast4 from '@/assets/images/menuCategories/breakfast4.svg';
+import breakfast5 from '@/assets/images/menuCategories/breakfast5.svg';
+import breakfast6 from '@/assets/images/menuCategories/breakfast6.svg';
+import lunch1 from '@/assets/images/menuCategories/lunch1.svg';
+import lunch2 from '@/assets/images/menuCategories/lunch2.svg';
+import lunch3 from '@/assets/images/menuCategories/lunch3.svg';
+import dinner1 from '@/assets/images/menuCategories/dinner1.svg';
+import dinner2 from '@/assets/images/menuCategories/dinner2.svg';
+import dinner3 from '@/assets/images/menuCategories/dinner3.svg';
+import appetiser1 from '@/assets/images/menuCategories/appetiser1.svg';
+import appetiser2 from '@/assets/images/menuCategories/appetiser2.svg';
+import appetiser3 from '@/assets/images/menuCategories/appetiser3.svg';
+import appetiser4 from '@/assets/images/menuCategories/appetiser4.svg';
+import appetiser5 from '@/assets/images/menuCategories/appetiser5.svg';
+import appetiser6 from '@/assets/images/menuCategories/appetiser6.svg';
+import appetiser7 from '@/assets/images/menuCategories/appetiser7.svg';
+import appetiser8 from '@/assets/images/menuCategories/appetiser8.svg';
+import appetiser9 from '@/assets/images/menuCategories/appetiser9.svg';
+import appetiser10 from '@/assets/images/menuCategories/appetiser10.svg';
+import appetiser11 from '@/assets/images/menuCategories/appetiser11.svg';
+import appetiser12 from '@/assets/images/menuCategories/appetiser12.svg';
+import appetiser13 from '@/assets/images/menuCategories/appetiser13.svg';
+import appetiser14 from '@/assets/images/menuCategories/appetiser14.svg';
+import appetiser15 from '@/assets/images/menuCategories/appetiser15.svg';
+import appetiser16 from '@/assets/images/menuCategories/appetiser16.svg';
+import appetiser17 from '@/assets/images/menuCategories/appetiser17.svg';
+import appetiser18 from '@/assets/images/menuCategories/appetiser18.svg';
+import maincourse1 from '@/assets/images/menuCategories/maincourse1.svg';
+import maincourse2 from '@/assets/images/menuCategories/maincourse2.svg';
+import maincourse3 from '@/assets/images/menuCategories/maincourse3.svg';
+import maincourse4 from '@/assets/images/menuCategories/maincourse4.svg';
+import maincourse5 from '@/assets/images/menuCategories/maincourse5.svg';
+import maincourse6 from '@/assets/images/menuCategories/maincourse6.svg';
+import maincourse7 from '@/assets/images/menuCategories/maincourse7.svg';
+import maincourse8 from '@/assets/images/menuCategories/maincourse8.svg';
+import maincourse15 from '@/assets/images/menuCategories/maincourse15.svg';
+import maincourse16 from '@/assets/images/menuCategories/maincourse16.svg';
+import maincourse17 from '@/assets/images/menuCategories/maincourse17.svg';
+import maincourse18 from '@/assets/images/menuCategories/maincourse18.svg';
+import desert1 from '@/assets/images/menuCategories/desert1.svg';
+import desert2 from '@/assets/images/menuCategories/desert2.svg';
+import desert3 from '@/assets/images/menuCategories/desert3.svg';
+import desert4 from '@/assets/images/menuCategories/desert4.svg';
+import desert5 from '@/assets/images/menuCategories/desert5.svg';
+import desert6 from '@/assets/images/menuCategories/desert6.svg';
+import desert7 from '@/assets/images/menuCategories/desert7.svg';
+import desert8 from '@/assets/images/menuCategories/desert8.svg';
+import drink1 from '@/assets/images/menuCategories/drink1.svg';
+import drink2 from '@/assets/images/menuCategories/drink2.svg';
+import drink3 from '@/assets/images/menuCategories/drink3.svg';
+import drink4 from '@/assets/images/menuCategories/drink4.svg';
+import drink5 from '@/assets/images/menuCategories/drink5.svg';
+import drink6 from '@/assets/images/menuCategories/drink6.svg';
+import drink10 from '@/assets/images/menuCategories/drink10.svg';
+import drink18 from '@/assets/images/menuCategories/drink18.svg';
+
 export const menuData: Record<
   string,
   {
@@ -22,7 +81,7 @@ export const menuData: Record<
     data: [
       {
         id: "breakfast1",
-        img: require("../assets/images/menuCategories/breakfast1.svg"),
+        img: breakfast1,
         name: "Yam & Egg Sauce",
         desc: "Boiled or fried yam served with a savory tomato and egg sauce",
         price: "100.00",
@@ -31,7 +90,7 @@ export const menuData: Record<
       },
       {
         id: "breakfast2",
-        img: require("../assets/images/menuCategories/breakfast2.svg"),
+        img: breakfast2,
         name: "Plantain & Fried Eggs",
         desc: "Fried ripe plantains served with scrambled or fried eggs",
         price: "200.00",
@@ -40,7 +99,7 @@ export const menuData: Record<
       },
       {
         id: "breakfast3",
-        img: require("../assets/images/menuCategories/breakfast3.svg"),
+        img: breakfast3,
         name: "Okpa",
         desc: "A protein-rich steamed Bambara nut pudding",
         price: "300.00",
@@ -49,7 +108,7 @@ export const menuData: Record<
       },
       {
         id: "breakfast4",
-        img: require("../assets/images/menuCategories/breakfast4.svg"),
+        img: breakfast4,
         name: "Tea & Bread",
         desc: "Classic breakfast of sweet tea with buttered bread",
         price: "400.00",
@@ -58,7 +117,7 @@ export const menuData: Record<
       },
       {
         id: "breakfast5",
-        img: require("../assets/images/menuCategories/breakfast5.svg"),
+        img: breakfast5,
         name: "Potatoes & Fish Sauce",
         desc: "Soft sweet potatoes served with a spicy fish sauce",
         price: "500.00",
@@ -67,7 +126,7 @@ export const menuData: Record<
       },
       {
         id: "breakfast6",
-        img: require("../assets/images/menuCategories/breakfast6.svg"),
+        img: breakfast6,
         name: "Indomie Noodles & Egg",
         desc: "Noodles stir-fried with vegetables and topped with boiled or fried egg",
         price: "600.00",
@@ -83,7 +142,7 @@ export const menuData: Record<
     data: [
       {
         id: "lunch1",
-        img: require("../assets/images/menuCategories/lunch1.svg"),
+        img: lunch1,
         name: "Basmati Rice & Turkey",
         desc: "Basmati rice, served with smoky grilled turkey",
         price: "100.00",
@@ -92,7 +151,7 @@ export const menuData: Record<
       },
       {
         id: "lunch2",
-        img: require("../assets/images/menuCategories/lunch2.svg"),
+        img: lunch2,
         name: "Palm Oil Rice & Fish",
         desc: "Traditional rice cooked with palm oil, crayfish, and smoked fish",
         price: "200.00",
@@ -101,7 +160,7 @@ export const menuData: Record<
       },
       {
         id: "lunch3",
-        img: require("../assets/images/menuCategories/lunch3.svg"),
+        img: lunch3,
         name: "Jollof Rice & Fried Prawns",
         desc: "A coconut-infused twist on jollof rice, paired with crispy fried prawns",
         price: "300.00",
@@ -117,7 +176,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/dinner1.svg"),
+        img: dinner1,
         name: "Pepper Soup &  Fish",
         desc: "Spicy, aromatic broth with tender grilled fish",
         price: "100.00",
@@ -126,7 +185,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/dinner2.svg"),
+        img: dinner2,
         name: "Vegetable & Chicken",
         desc: "Traditional rice cooked with palm oil, crayfish, and smoked fish",
         price: "200.00",
@@ -135,7 +194,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/dinner3.svg"),
+        img: dinner3,
         name: "Coconut Rice & Fried Fish",
         desc: "Rice cooked with coconut milk and served with crispy fried fish",
         price: "300.00",
@@ -144,7 +203,7 @@ export const menuData: Record<
       },
       {
         id: "4",
-        img: require("../assets/images/menuCategories/maincourse6.svg"),
+        img: maincourse6,
         name: "Oha Soup & Fufu",
         desc: "Traditional Igbo soup with oha leaves, paired with fufu",
         price: "1600.00",
@@ -153,7 +212,7 @@ export const menuData: Record<
       },
       {
         id: "5",
-        img: require("../assets/images/menuCategories/maincourse7.svg"),
+        img: maincourse7,
         name: "Afang Soup & Eba",
         desc: "Rich vegetable soup with waterleaf and afang leaves, served with eba",
         price: "1600.00",
@@ -162,7 +221,7 @@ export const menuData: Record<
       },
       {
         id: "6",
-        img: require("../assets/images/menuCategories/maincourse8.svg"),
+        img: maincourse8,
         name: "Edikang Ikong & Semovita",
         desc: "Nutritious vegetable soup made with pumpkin leaves and waterleaf",
         price: "1600.00",
@@ -171,7 +230,7 @@ export const menuData: Record<
       },
       {
         id: "7",
-        img: require("../assets/images/menuCategories/maincourse18.svg"),
+        img: maincourse18,
         name: "Spaghetti & Chicken",
         desc: "Chicken served over spaghetti noodles, with a sauce",
         price: "1600.00",
@@ -180,7 +239,7 @@ export const menuData: Record<
       },
       {
         id: "8",
-        img: require("../assets/images/menuCategories/maincourse17.svg"),
+        img: maincourse17,
         name: "Beans & Dodo",
         desc: "Sweet fried plantains paired with well-seasoned stewed beans",
         price: "1600.00",
@@ -189,7 +248,7 @@ export const menuData: Record<
       },
       {
         id: "9",
-        img: require("../assets/images/menuCategories/maincourse16.svg"),
+        img: maincourse16,
         name: "Yam Porridge (Asaro)",
         desc: "Mashed yam cooked in a spicy palm oil sauce with vegetables and fish",
         price: "1600.00",
@@ -198,7 +257,7 @@ export const menuData: Record<
       },
       {
         id: "10",
-        img: require("../assets/images/menuCategories/maincourse15.svg"),
+        img: maincourse15,
         name: "Fried Rice & Chicken",
         desc: "Fried vegetables and rice served with grilled or fried chicken",
         price: "1600.00",
@@ -214,7 +273,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/appetiser1.svg"),
+        img: appetiser1,
         name: "Puff Puff",
         desc: "Soft, deep-fried dough balls, slightly crispy outside",
         price: "100.00",
@@ -223,7 +282,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/appetiser2.svg"),
+        img: appetiser2,
         name: "Chin chin",
         desc: "Crunchy, bite-sized fried dough snack",
         price: "200.00",
@@ -232,7 +291,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/appetiser3.svg"),
+        img: appetiser3,
         name: "Akara & Pap",
         desc: "Crispy bean fritters paired with smooth, warm corn pudding",
         price: "300.00",
@@ -241,7 +300,7 @@ export const menuData: Record<
       },
       {
         id: "4",
-        img: require("../assets/images/menuCategories/appetiser4.svg"),
+        img: appetiser4,
         name: "Moi Moi",
         desc: "Bean pudding blended with peppers, onions, and spices, with fish or egg",
         price: "400.00",
@@ -250,7 +309,7 @@ export const menuData: Record<
       },
       {
         id: "5",
-        img: require("../assets/images/menuCategories/appetiser5.svg"),
+        img: appetiser5,
         name: "Spicy Suya Platter",
         desc: "Grilled beef coated in suya spice, served with pepper sauce",
         price: "500.00",
@@ -259,7 +318,7 @@ export const menuData: Record<
       },
       {
         id: "6",
-        img: require("../assets/images/menuCategories/appetiser6.svg"),
+        img: appetiser6,
         name: "Peppered Snails",
         desc: "Tender snails cooked in a fiery pepper sauce",
         price: "600.00",
@@ -268,7 +327,7 @@ export const menuData: Record<
       },
       {
         id: "7",
-        img: require("../assets/images/menuCategories/appetiser7.svg"),
+        img: appetiser7,
         name: "Gizdodo",
         desc: "Fried gizzard and sweet plantains tossed in a rich, spicy tomato sauce",
         price: "700.00",
@@ -277,7 +336,7 @@ export const menuData: Record<
       },
       {
         id: "8",
-        img: require("../assets/images/menuCategories/appetiser8.svg"),
+        img: appetiser8,
         name: "Nkwobi",
         desc: "Spicy cow foot dish in a palm oil-based sauce with utazi leaves",
         price: "800.00",
@@ -286,7 +345,7 @@ export const menuData: Record<
       },
       {
         id: "9",
-        img: require("../assets/images/menuCategories/appetiser9.svg"),
+        img: appetiser9,
         name: "Pepper Soup with Yam",
         desc: "A spicy broth made with fish, goat, or chicken served with Yam",
         price: "900.00",
@@ -295,7 +354,7 @@ export const menuData: Record<
       },
       {
         id: "10",
-        img: require("../assets/images/menuCategories/appetiser10.svg"),
+        img: appetiser10,
         name: "Kilishi",
         desc: " Nigerian-style beef jerky, spiced and sun-dried for a chewy bite",
         price: "1000.00",
@@ -304,7 +363,7 @@ export const menuData: Record<
       },
       {
         id: "11",
-        img: require("../assets/images/menuCategories/appetiser11.svg"),
+        img: appetiser11,
         name: "Boli & Sauce",
         desc: "Grilled plantains paired with pepper sauce",
         price: "1100.00",
@@ -313,7 +372,7 @@ export const menuData: Record<
       },
       {
         id: "12",
-        img: require("../assets/images/menuCategories/appetiser12.svg"),
+        img: appetiser12,
         name: "Pepper Soup",
         desc: "A spicy broth made with fish, goat, or chicken, flavored with local spices.",
         price: "1200.00",
@@ -322,7 +381,7 @@ export const menuData: Record<
       },
       {
         id: "13",
-        img: require("../assets/images/menuCategories/appetiser13.svg"),
+        img: appetiser13,
         name: "Yam Chips",
         desc: "Crispy yam chips with either with egg sauce or ketchup",
         price: "1300.00",
@@ -331,7 +390,7 @@ export const menuData: Record<
       },
       {
         id: "14",
-        img: require("../assets/images/menuCategories/appetiser14.svg"),
+        img: appetiser14,
         name: "Samosa",
         desc: "Baked pastry stuffed with spiced potatoes and other vegetables",
         price: "1400.00",
@@ -340,7 +399,7 @@ export const menuData: Record<
       },
       {
         id: "15",
-        img: require("../assets/images/menuCategories/appetiser15.svg"),
+        img: appetiser15,
         name: "Meatpie",
         desc: "Pie with a filling of meat and other savory ingredients",
         price: "1500.00",
@@ -349,7 +408,7 @@ export const menuData: Record<
       },
       {
         id: "16",
-        img: require("../assets/images/menuCategories/appetiser16.svg"),
+        img: appetiser16,
         name: "Scotch Egg",
         desc: "Boiled egg wrapped in sausage meat, coated in breadcrumbs and baked",
         price: "1600.00",
@@ -358,7 +417,7 @@ export const menuData: Record<
       },
       {
         id: "17",
-        img: require("../assets/images/menuCategories/appetiser17.svg"),
+        img: appetiser17,
         name: "Peppered Kpomo",
         desc: "Spicy and delicious dish made from cowskin tossed in a pepper sauce.",
         price: "1700.00",
@@ -367,7 +426,7 @@ export const menuData: Record<
       },
       {
         id: "18",
-        img: require("../assets/images/menuCategories/appetiser18.svg"),
+        img: appetiser18,
         name: "Spicy Asun",
         desc: "Spicy, grilled, or barbecued goat meat dish",
         price: "1800.00",
@@ -383,7 +442,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/maincourse1.svg"),
+        img: maincourse1,
         name: "Jollof Rice & Chicken",
         desc: "Spiced tomato-based rice served with grilled or fried chicken",
         price: "1100.00",
@@ -392,7 +451,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/maincourse2.svg"),
+        img: maincourse2,
         name: "Pounded Yam & Egusi Soup",
         desc: "Smooth pounded yam paired with rich melon seed soup",
         price: "1200.00",
@@ -401,7 +460,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/maincourse3.svg"),
+        img: maincourse3,
         name: "Amala & Ewedu Soup",
         desc: "Soft amala (yam flour) served with green jute leaf soup and spicy stew",
         price: "1300.00",
@@ -410,7 +469,7 @@ export const menuData: Record<
       },
       {
         id: "4",
-        img: require("../assets/images/menuCategories/maincourse4.svg"),
+        img: maincourse4,
         name: "Ofada Rice & Ayamase",
         desc: "Local unpolished rice with spicy green pepper stew",
         price: "1400.00",
@@ -419,7 +478,7 @@ export const menuData: Record<
       },
       {
         id: "5",
-        img: require("../assets/images/menuCategories/maincourse5.svg"),
+        img: maincourse5,
         name: "Banga Soup & Starch",
         desc: "Palm nut soup with seafood, served with stretchy starch",
         price: "1500.00",
@@ -428,7 +487,7 @@ export const menuData: Record<
       },
       {
         id: "6",
-        img: require("../assets/images/menuCategories/maincourse6.svg"),
+        img: maincourse6,
         name: "Oha Soup & Fufu",
         desc: "Traditional Igbo soup with oha leaves, paired with fufu",
         price: "1600.00",
@@ -444,7 +503,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/desert1.svg"),
+        img: desert1,
         name: "Honey Bean Cake",
         desc: "A moist, sweet cake made from blended honey beans and spices",
         price: "2100.00",
@@ -453,7 +512,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/desert2.svg"),
+        img: desert2,
         name: "Sweet Potato Pudding",
         desc: "A creamy dessert made from mashed sweet potatoes and coconut milk",
         price: "2200.00",
@@ -462,7 +521,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/desert3.svg"),
+        img: desert3,
         name: "Coconut Rice Pudding",
         desc: "A rich, velvety rice pudding infused with coconut milk and sugar",
         price: "2300.00",
@@ -471,7 +530,7 @@ export const menuData: Record<
       },
       {
         id: "4",
-        img: require("../assets/images/menuCategories/desert4.svg"),
+        img: desert4,
         name: " Fruit Salad",
         desc: "A mix of tropical fruits like pineapple, watermelon, and banana",
         price: "2400.00",
@@ -480,7 +539,7 @@ export const menuData: Record<
       },
       {
         id: "5",
-        img: require("../assets/images/menuCategories/desert5.svg"),
+        img: desert5,
         name: "Cassava Cake",
         desc: "A chewy, sweet cake made from grated cassava, coconut, and milk",
         price: "2500.00",
@@ -489,7 +548,7 @@ export const menuData: Record<
       },
       {
         id: "6",
-        img: require("../assets/images/menuCategories/desert6.svg"),
+        img: desert6,
         name: "Ice Cream",
         desc: "A creamy, frozen treat with tropical flavors like mango and coconut",
         price: "2600.00",
@@ -498,7 +557,7 @@ export const menuData: Record<
       },
       {
         id: "7",
-        img: require("../assets/images/menuCategories/desert8.svg"),
+        img: desert8,
         name: "Kulikuli",
         desc: "Crunchy, spiced peanut snack made from groundnut paste",
         price: "2700.00",
@@ -507,7 +566,7 @@ export const menuData: Record<
       },
       {
         id: "8",
-        img: require("../assets/images/menuCategories/desert7.svg"),
+        img: desert7,
         name: "Coconut Candy",
         desc: "Chewy, caramelized coconut flakes mixed with sugar",
         price: "2800.00",
@@ -523,7 +582,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/drink1.svg"),
+        img: drink1,
         name: "Chapman",
         desc: "A non-alcoholic cocktail with a fruity, bittersweet taste",
         price: "100.00",
@@ -532,7 +591,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/drink2.svg"),
+        img: drink2,
         name: "Zobo",
         desc: "A tangy, refreshing drink made from hibiscus flowers, rich in antioxidants",
         price: "200.00",
@@ -541,7 +600,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/drink3.svg"),
+        img: drink3,
         name: "Palm wine",
         desc: "Fermented, sweet and mildly alcoholic drink",
         price: "300.00",
@@ -550,7 +609,7 @@ export const menuData: Record<
       },
       {
         id: "4",
-        img: require("../assets/images/menuCategories/drink4.svg"),
+        img: drink4,
         name: "Coffee",
         desc: "An aromatic beverage made from roasted coffee beans",
         price: "400.00",
@@ -559,7 +618,7 @@ export const menuData: Record<
       },
       {
         id: "5",
-        img: require("../assets/images/menuCategories/drink5.svg"),
+        img: drink5,
         name: "Kunu",
         desc: "A millet-based drink with a creamy, spicy-sweet flavor",
         price: "500.00",
@@ -568,7 +627,7 @@ export const menuData: Record<
       },
       {
         id: "6",
-        img: require("../assets/images/menuCategories/drink6.svg"),
+        img: drink6,
         name: "Ginger drink",
         desc: "A spicy beverage made from fresh ginger, with lemon",
         price: "600.00",
@@ -584,7 +643,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/drink1.svg"),
+        img: drink1.svg,
         name: "Chapman",
         desc: "A non-alcoholic cocktail with a fruity, bittersweet taste",
         price: "100.00",
@@ -593,7 +652,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/appetiser8.svg"),
+        img: appetiser8,
         name: "Nkwobi",
         desc: "Spicy cow foot dish in a palm oil-based sauce with utazi leaves",
         price: "800.00",
@@ -602,7 +661,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/lunch1.svg"),
+        img: lunch1,
         name: "Basmati Rice & Turkey",
         desc: "Basmati rice, served with smoky grilled turkey",
         price: "100.00",
@@ -618,7 +677,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/drink1.svg"),
+        img: drink1,
         name: "Chapman",
         desc: "A non-alcoholic cocktail with a fruity, bittersweet taste",
         price: "100.00",
@@ -627,7 +686,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/appetiser8.svg"),
+        img: appetiser8,
         name: "Nkwobi",
         desc: "Spicy cow foot dish in a palm oil-based sauce with utazi leaves",
         price: "800.00",
@@ -636,7 +695,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/lunch1.svg"),
+        img: lunch1,
         name: "Basmati Rice & Turkey",
         desc: "Basmati rice, served with smoky grilled turkey",
         price: "100.00",
@@ -645,7 +704,7 @@ export const menuData: Record<
       },
       {
         id: "4",
-        img: require("../assets/images/menuCategories/appetiser1.svg"),
+        img: appetiser1,
         name: "Puff Puff",
         desc: "Soft, deep-fried dough balls, slightly crispy outside",
         price: "100.00",
@@ -654,7 +713,7 @@ export const menuData: Record<
       },
       {
         id: "5",
-        img: require("../assets/images/menuCategories/appetiser2.svg"),
+        img: appetiser2,
         name: "Chin chin",
         desc: "Crunchy, bite-sized fried dough snack",
         price: "200.00",
@@ -663,7 +722,7 @@ export const menuData: Record<
       },
       {
         id: "6",
-        img: require("../assets/images/menuCategories/desert6.svg"),
+        img: desert6,
         name: "Ice Cream",
         desc: "A creamy, frozen treat with tropical flavors like mango and coconut",
         price: "2600.00",
@@ -679,7 +738,7 @@ export const menuData: Record<
     data: [
       {
         id: "1",
-        img: require("../assets/images/menuCategories/breakfast3.svg"),
+        img: breakfast3,
         name: "Okpa",
         desc: "A protein-rich steamed Bambara nut pudding",
         price: "300.00",
@@ -688,7 +747,7 @@ export const menuData: Record<
       },
       {
         id: "2",
-        img: require("../assets/images/menuCategories/breakfast5.svg"),
+        img: breakfast5,
         name: "Potatoes & Fish Sauce",
         desc: "Soft sweet potatoes served with a spicy fish sauce",
         price: "500.00",
@@ -697,7 +756,7 @@ export const menuData: Record<
       },
       {
         id: "3",
-        img: require("../assets/images/menuCategories/lunch1.svg"),
+        img: lunch1,
         name: "Basmati Rice & Turkey",
         desc: "Basmati rice, served with smoky grilled turkey",
         price: "100.00",
@@ -706,7 +765,7 @@ export const menuData: Record<
       },
       {
         id: "4",
-        img: require("../assets/images/menuCategories/lunch2.svg"),
+        img: lunch2,
         name: "Palm Oil Rice & Fish",
         desc: "Traditional rice cooked with palm oil, crayfish, and smoked fish",
         price: "200.00",
@@ -715,7 +774,7 @@ export const menuData: Record<
       },
       {
         id: "5",
-        img: require("../assets/images/menuCategories/drink6.svg"),
+        img: drink6,
         name: "Ginger drink",
         desc: "A spicy beverage made from fresh ginger, with lemon",
         price: "600.00",
@@ -724,7 +783,7 @@ export const menuData: Record<
       },
       {
         id: "6",
-        img: require("../assets/images/menuCategories/drink10.svg"),
+        img: drink10,
         name: "Tigernut Drink",
         desc: "A naturally sweet, nutty beverage made from tiger nuts, dairy-free",
         price: "600.00",
@@ -733,7 +792,7 @@ export const menuData: Record<
       },
       {
         id: "7",
-        img: require("../assets/images/menuCategories/drink18.svg"),
+        img: drink18,
         name: "Apple Drink",
         desc: "A sweet and refreshing beverage made from pressed apples",
         price: "600.00",
@@ -742,7 +801,7 @@ export const menuData: Record<
       },
       {
         id: "8",
-        img: require("../assets/images/menuCategories/desert3.svg"),
+        img: desert3,
         name: "Coconut Rice Pudding",
         desc: "A rich, velvety rice pudding infused with coconut milk and sugar",
         price: "2300.00",
