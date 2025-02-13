@@ -18,7 +18,7 @@ export const InteriorPreview = () => {
           heading={true}
           cardHeading={'Step into our world'}
           showBtn={true}
-          btnPath={'/gallery'}
+          btnPath={'/gallery/interior'}
           btnText={'More Pictures'}
           cardTextWrapperStyle={styles.cardTextWrapperMenu}
           // btnStyle={styles.cardBtnMenu}

@@ -41,15 +41,9 @@ export const ItemCard: React.FC<ItemCardProps> = ({
               href={btnPath ?? '/menu'}
               text={'View Details'}
               linkStyle={btnStyle}
-              // marginTop='0'
             />
           }
         </div>}
-
-
-
-
-
     </div>
   )
 }

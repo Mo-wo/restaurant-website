@@ -43,6 +43,7 @@
 .text{
   text-transform: uppercase;
   font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
 

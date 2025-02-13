@@ -14,37 +14,38 @@ export default function Offerings() {
     {
       id: '1',
       imgSrc: appetizer,
-      name: 'Appetizers'
+      name: 'Appetisers',
     },
     {
       id: '2',
       imgSrc: mainCourse,
-      name: 'Main Courses'
+      name: 'Main Courses',
     },
     {
       id: '3',
       imgSrc: desert,
-      name: 'Deserts'
+      name: 'Deserts',
     },
     {
       id: '4',
       imgSrc: drinks,
-      name: 'Drinks'
+      name: 'Drinks',
     },
+  ];
 
-  ]
+
   return (
     <Section contentContainerStyle={styles.section} color={'white'}>
       <h2 className={styles.h2} data-aos="zoom-in">Explore our delicious offerings</h2>
 
       <div className={styles.container}>
         {offerings.map((offering, index) => (
-          <Link href={`/menu/${offering.name.toLowerCase()}`} key={index.toString()} className={styles.wrapper}  >
+          <div key={index.toString()} className={styles.wrapper}  >
             <div className={styles.imageWrapper} data-aos='fade-up'>
               <Image src={offering.imgSrc} alt={offering.name} className={styles.img} />
             </div>
-            <p className={styles.text} data-aos='fade-up'>{offering.name}</p>
-          </Link>
+            <Link href={`/menu/${offering.name.toLowerCase().replace(/ /g, "-")}`} className={styles.text} data-aos='fade-up'>{offering.name}</Link>
+          </div>
         ))}
       </div>
     </Section>

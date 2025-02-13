@@ -13,17 +13,20 @@ export default function Categories() {
     {
       id: '1',
       imgSrc: breakfast,
-      name: 'Breakfast'
+      name: 'Breakfast',
+      pathname: 'breakfast',
     },
     {
       id: '2',
       imgSrc: lunch,
-      name: 'Lunch'
+      name: 'Lunch',
+      pathname: 'lunch',
     },
     {
       id: '3',
       imgSrc: dinner,
-      name: 'Dinner'
+      name: 'Dinner',
+      pathname: 'dinner',
     }
   ];
 
@@ -33,12 +36,12 @@ export default function Categories() {
 
       <div className={styles.container}>
         {categories.map((category, index) => (
-          <Link href={`/menu/${category.name.toLowerCase()}`} key={index.toString()} className={styles.wrapper} >
+          <div key={index.toString()} className={styles.wrapper} >
             <div className={styles.imageWrapper} data-aos='fade-up'>
               <Image src={category.imgSrc} alt={category.name} className={styles.img} />
             </div>
-            <p className={styles.text} data-aos='fade-up'>{category.name}</p>
-          </Link>
+            <Link href={`/menu/${category.name.toLowerCase()}`} className={styles.text} data-aos='fade-up'>{category.name}</Link>
+          </div>
         ))}
       </div>
     </Section>

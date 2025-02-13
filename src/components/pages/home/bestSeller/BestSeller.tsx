@@ -16,6 +16,7 @@ export const BestSeller = () => {
           cardHeading={'Jollof Rice'}
           cardInfo={'A flavorful rice dish cooked with tomatoes, peppers, onions, and spices.'}
           showBtn={true}
+          btnPath='/menu/main-courses/jollof-rice'
         />
         <ItemCard
           cardStyle={styles.cardWrapper}
@@ -23,6 +24,7 @@ export const BestSeller = () => {
           cardHeading={'Pounded Yam and Egusi'}
           cardInfo={'A smooth, stretchy dough-like dish made from yams, paired with egusi soup, a rich, nutty soup.'}
           showBtn={true}
+          btnPath='/menu/main-courses/pounded-yam-and-egusi'
         />
         <ItemCard
           cardStyle={styles.cardWrapper}
@@ -30,6 +32,7 @@ export const BestSeller = () => {
           cardHeading={'Moi Moi'}
           cardInfo={'A steamed bean pudding made from blended beans, peppers, and onions, often served has a side dish..'}
           showBtn={true}
+          btnPath='/menu/main-courses/moi-moi'
         />
       </div>
     </Section>

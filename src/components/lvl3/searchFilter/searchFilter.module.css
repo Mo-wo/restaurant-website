@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-small);
-  z-index: 1000;
+  /* z-index: 0; */
 }
 
 .hideButtonWrapper {

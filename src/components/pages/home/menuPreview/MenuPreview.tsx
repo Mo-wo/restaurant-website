@@ -18,7 +18,7 @@ export const MenuPreview = () => {
           heading={true}
           cardHeading={'A glimpse of our world'}
           showBtn={true}
-          btnPath={'/gallery'}
+          btnPath={'/gallery/menu'}
           btnText={'More Pictures'}
           cardTextWrapperStyle={styles.cardTextWrapperMenu}
         />

@@ -21,7 +21,7 @@ export default function Hero() {
 
         <div className={styles.ctaSection}>
           <h2>Step into our world</h2>
-          <LinkButton href='gallery/tour' text='More Pictures' marginTop={'0'} />
+          <LinkButton href='gallery/interior' text='More Pictures' marginTop={'0'} />
         </div>
       </Section>
     </>

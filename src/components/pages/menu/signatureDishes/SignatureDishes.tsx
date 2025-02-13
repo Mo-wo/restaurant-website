@@ -12,7 +12,7 @@ export default function SignatureDishes() {
   const signatureDishes = [
     {
       id: '1',
-      name: `Chef's Favourite`,
+      name: `Chefs Favourite`,
       img: chefsFavourite,
     },
     {
@@ -33,7 +33,7 @@ export default function SignatureDishes() {
       <div className={styles.container}>
         {signatureDishes.map((item, index) => (
           <React.Fragment key={index.toString()}>
-            <MenuCard cardImgSrc={item.img} title={item.name} />
+            <MenuCard cardImgSrc={item.img} title={item.name} href={item.name !== "Chef's Favourite" ? `/menu/${item.name.toLowerCase().replace(/ /g, '-')}` : '/menu/chefs-favourite'} />
           </React.Fragment>
         ))}
       </div>
@@ -42,7 +42,7 @@ export default function SignatureDishes() {
     <Section sectionStyle={styles.section} contentContainerStyle={styles.orderSection} color={'white'}>
       <h2 data-aos='zoom-in' style={{marginBottom: 0}}>DON&apos;T JUST BROWSE - INDULGE</h2>
       <p data-aos='fade-up'>Order online for quick and delicious delivery straight to your door</p>
-      <LinkButton href="/menu" text='Order Now' />
+      <LinkButton href="/menu/deserts" text='Order Now' />
     </Section>
     </>
   )

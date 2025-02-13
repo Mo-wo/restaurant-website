@@ -42,7 +42,7 @@ export default function ChefsCorner() {
 
         <div className={styles.ctaSection}>
           <h2>A GLIMPSE OF OUR WORLD</h2>
-          <LinkButton href='/gallery/tour' text={'More pictures'} marginTop={'0'}/>
+          <LinkButton href='/gallery/menu' text={'More pictures'} marginTop={'0'}/>
         </div>
       </Section>
     </>
