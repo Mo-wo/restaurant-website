@@ -65,7 +65,7 @@ export const menuData: Record<
     totalPages: number;
     data: {
       id: string;
-      img: string;
+      img: any;
       name: string;
       desc: string;
       price: string;
