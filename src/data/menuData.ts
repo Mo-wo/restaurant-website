@@ -21,7 +21,7 @@ export const menuData: Record<
     totalPages: 10,
     data: [
       {
-        id: "1",
+        id: "breakfast1",
         img: require("../assets/images/menuCategories/breakfast1.svg"),
         name: "Yam & Egg Sauce",
         desc: "Boiled or fried yam served with a savory tomato and egg sauce",
@@ -30,7 +30,7 @@ export const menuData: Record<
         new: false,
       },
       {
-        id: "2",
+        id: "breakfast2",
         img: require("../assets/images/menuCategories/breakfast2.svg"),
         name: "Plantain & Fried Eggs",
         desc: "Fried ripe plantains served with scrambled or fried eggs",
@@ -39,7 +39,7 @@ export const menuData: Record<
         new: true,
       },
       {
-        id: "3",
+        id: "breakfast3",
         img: require("../assets/images/menuCategories/breakfast3.svg"),
         name: "Okpa",
         desc: "A protein-rich steamed Bambara nut pudding",
@@ -48,7 +48,7 @@ export const menuData: Record<
         new: true,
       },
       {
-        id: "4",
+        id: "breakfast4",
         img: require("../assets/images/menuCategories/breakfast4.svg"),
         name: "Tea & Bread",
         desc: "Classic breakfast of sweet tea with buttered bread",
@@ -57,7 +57,7 @@ export const menuData: Record<
         new: true,
       },
       {
-        id: "5",
+        id: "breakfast5",
         img: require("../assets/images/menuCategories/breakfast5.svg"),
         name: "Potatoes & Fish Sauce",
         desc: "Soft sweet potatoes served with a spicy fish sauce",
@@ -66,7 +66,7 @@ export const menuData: Record<
         new: true,
       },
       {
-        id: "6",
+        id: "breakfast6",
         img: require("../assets/images/menuCategories/breakfast6.svg"),
         name: "Indomie Noodles & Egg",
         desc: "Noodles stir-fried with vegetables and topped with boiled or fried egg",
@@ -82,7 +82,7 @@ export const menuData: Record<
     totalPages: 10,
     data: [
       {
-        id: "1",
+        id: "lunch1",
         img: require("../assets/images/menuCategories/lunch1.svg"),
         name: "Basmati Rice & Turkey",
         desc: "Basmati rice, served with smoky grilled turkey",
@@ -91,7 +91,7 @@ export const menuData: Record<
         new: false,
       },
       {
-        id: "2",
+        id: "lunch2",
         img: require("../assets/images/menuCategories/lunch2.svg"),
         name: "Palm Oil Rice & Fish",
         desc: "Traditional rice cooked with palm oil, crayfish, and smoked fish",
@@ -100,7 +100,7 @@ export const menuData: Record<
         new: true,
       },
       {
-        id: "3",
+        id: "lunch3",
         img: require("../assets/images/menuCategories/lunch3.svg"),
         name: "Jollof Rice & Fried Prawns",
         desc: "A coconut-infused twist on jollof rice, paired with crispy fried prawns",

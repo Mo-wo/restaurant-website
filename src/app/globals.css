@@ -98,6 +98,7 @@ body {
 
 .main {
   padding-top: 100px;
+  min-height: 50vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -209,11 +210,5 @@ textarea {
 @media screen and (min-width: 768px) {
   h1 {
     font-size: var(--text-large);
-  }
-}
-
-@media screen and (min-width: 850px) {
-  button {
-    /* width: var(--button-width-desktop); */
   }
 }
