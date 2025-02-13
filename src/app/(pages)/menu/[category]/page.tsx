@@ -17,8 +17,8 @@ export default function MenuCategory() {
   return (
     <>
       <PageBanner
-        heading={'APPETISERS TO TEMPT YOUR TASTE BUDS'}
-        desc={'Start your meal right with our carefully crafted appetisers, full of flavor and freshness'}
+        heading={categoryData.heading}
+        desc={categoryData.description}
         />
         <MenuCategoryPage pathname={pathname} categoryData={categoryData} />
     </>

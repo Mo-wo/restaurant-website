@@ -54,7 +54,7 @@
   display: none;
 }
 
-.textButton {
+.textButton, .activeFilter {
   background: none;
   width: auto;
   color: var(--color-text);
@@ -63,7 +63,11 @@
   font-weight: var(--weight-medium);
 }
 
-.textButton:hover {
+.activeFilter {
+  color: #ef3315;
+}
+
+.textButton:hover, .activeFilter:hover {
   color: var(--color-tertiary);
   background: none;
 }

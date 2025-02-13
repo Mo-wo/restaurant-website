@@ -7,37 +7,28 @@ import { IoFilter } from "react-icons/io5";
 type SearchFilterProps = {
   query: string;
   onSearch: (searchQuery: string) => void;
-  onPriceFilter: (category: string) => void;
-  onPopularFilter: (category: string) => void;
-  onNewestFilter: (category: string) => void;
+  onFilterChange: (filter: string) => void;
+  activeFilter: string;
 }
 
-export const SearchFilter:React.FC<SearchFilterProps> = ({ query, onSearch, onPriceFilter, onNewestFilter, onPopularFilter }) => {
-  const [searchQuery, setSearchQuery] = useState<string>(query);
-  const [filtercategory, setFilterCategory] = useState<string>('');
+export const SearchFilter:React.FC<SearchFilterProps> = ({ query, onSearch,onFilterChange, activeFilter}) => {
   const [showFilter, setShowFilter] = useState<boolean>(false);
+  
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setSearchQuery(e.target.value);
-    onSearch(searchQuery);
-  }
 
-  const handlePriceFilter = () => {
-    setFilterCategory('price');
-    onPriceFilter(filtercategory);
-  };
-
-  const handlePopularFilter = () => {
-    setFilterCategory('popular');
-    onPopularFilter(filtercategory);
-  };
-  const handleNewestFilter = () => {
-    setFilterCategory('newest');
-    onNewestFilter(filtercategory);
-  };
-
-  const handleFilterClick = () => {
-    setShowFilter(!showFilter);
+  const handleFilter = (filterType: string) => {
+    switch (filterType) {
+      case 'price':
+        onFilterChange('price');
+        break;
+      case 'popular':
+        onFilterChange('popular');
+        break;
+      case 'new':
+        onFilterChange('new');
+        break;
+    }
+    setShowFilter(false);
   }
 
   return (
@@ -51,18 +42,18 @@ export const SearchFilter:React.FC<SearchFilterProps> = ({ query, onSearch, onPr
             type='text'
             placeholder='Search'
             className={styles.searchInput}
-            value={searchQuery}
-            onChange={handleSearch}
+            value={query}
+            onChange={(e) => onSearch(e.target.value)}
           />
         </label>
       </div>
 
       <div className={styles.filterWrapper}>
-        <button className={styles.textButton} onClick={handleFilterClick}><IoFilter size={20} /></button>
+        <button className={styles.textButton} onClick={() => setShowFilter(!showFilter)}><IoFilter size={20} /></button>
         <div className={showFilter ? styles.buttonWrapper : styles.hideButtonWrapper}>
-          <button className={styles.textButton} onClick={handlePriceFilter}>Price</button>
-          <button className={styles.textButton} onClick={handlePopularFilter}>Popular</button>
-          <button className={styles.textButton} onClick={handleNewestFilter}>Newest</button>
+          <button className={activeFilter === 'price' ? styles.activeFilter : styles.textButton}  onClick={() => handleFilter('price')}>Price</button>
+          <button className={activeFilter === 'popular' ? styles.activeFilter : styles.textButton} onClick={() => handleFilter('popular')}>Popular</button>
+          <button className={activeFilter === 'new' ? styles.activeFilter : styles.textButton} onClick={() => handleFilter('new')}>Newest</button>
         </div>
       </div>
     </section>

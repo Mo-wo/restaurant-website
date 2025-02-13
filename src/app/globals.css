@@ -167,18 +167,6 @@ button {
   transition: background-color 0.5s ease-in-out;
 }
 
-/* button > a {
-  color: var(--color-primary);
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius);
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
-
 button:hover {
   background-color: #ef3315;
 }
