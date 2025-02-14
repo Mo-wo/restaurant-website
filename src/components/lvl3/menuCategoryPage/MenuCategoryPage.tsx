@@ -24,7 +24,7 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
   // const itemsPerPage = 20;
   // const itemsPerPage = filteredData?.length;
   // const totalPages = Math.ceil(filteredData?.length / itemsPerPage);
-  const totalPages = categoryData.totalPages;
+  const totalPages = categoryData.totalPages; 
   
 
   const handlePageChange = (page: number) => {
