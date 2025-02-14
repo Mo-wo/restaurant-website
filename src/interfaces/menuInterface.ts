@@ -1,6 +1,8 @@
+import { StaticImageData } from 'next/image';
+
 export interface MenuItem {
   id: string;
-  img: any;
+  img: StaticImageData;
   name: string;
   desc: string;
   price: string;
