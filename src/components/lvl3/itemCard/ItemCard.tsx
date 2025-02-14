@@ -2,12 +2,13 @@ import styles from './itemCard.module.css';
 import React from 'react';
 import { LinkButton } from '@/components/lvl2/button/Button';
 import ImageComponent from '@/components/lvl2/image/Image';
+import { StaticImageData } from 'next/image';
 
 
 interface ItemCardProps {
   cardStyle?: string;
   cardImgWrapperStyle?: string;
-  cardImgSrc?: string;
+  cardImgSrc?: StaticImageData;
   cardImgStyle?: string;
   cardTextWrapperStyle?: string;
   heading?: boolean;

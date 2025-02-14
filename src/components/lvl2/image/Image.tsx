@@ -1,9 +1,9 @@
 import React from 'react';
-import Image, { ImageProps } from 'next/image';
+import Image, { ImageProps, StaticImageData } from 'next/image';
 import styles from './image.module.css';
 
 interface ImageComponentProps extends ImageProps {
-  src: string;
+  src: StaticImageData;
   alt: string;
   className?: string;
   animation?: string;

@@ -6,7 +6,7 @@ import { MenuCategoryCard } from '../menuCategoryCard/MenuCategoryCard';
 import { Pagination } from '../pagination/Pagination';
 import styles from './menuCategoryPage.module.css';
 import { ThreeDots } from 'react-loader-spinner'
-import { MenuCategory } from '@/interfaces/menuInterface';
+import { MenuCategory, MenuItem } from '@/interfaces/menuInterface';
 
 type MenuCategoryPageProps = {
   pathname: string;
@@ -17,9 +17,9 @@ type MenuCategoryPageProps = {
 export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, categoryData, category }) => {
   const data = categoryData.data;
   const [loading, setLoading] = useState<boolean>(false);
-  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [filterType, setFilterType] = useState<string>('');
-  const [filteredData, setFilteredData] = useState<any>(null);
+  const [filteredData, setFilteredData] = useState<MenuItem[] | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 20;
   // const itemsPerPage = filteredData?.length;
@@ -46,15 +46,15 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
 
     if (searchQuery) {
     const query = searchQuery.toLowerCase();
-      filtered =  filtered.filter((item: any) => item.name.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query));
+      filtered =  filtered.filter((item: MenuItem) => item.name.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query));
     };
 
     if (filterType === 'popular') {
-      filtered = filtered.filter((item: any) => item.popular === true);
+      filtered = filtered.filter((item: MenuItem) => item.popular === true);
     } else if (filterType === 'new') {
-      filtered = filtered.filter((item: any) => item.new === true);
+      filtered = filtered.filter((item: MenuItem) => item.new === true);
     } else if (filterType === 'price') {
-      filtered = filtered.sort((b: any, a: any) => a.price - b.price);
+      filtered = filtered.sort((b: MenuItem, a: MenuItem) => a.price - b.price);
     }
 
 
@@ -112,7 +112,7 @@ export const MenuCategoryPage: React.FC<MenuCategoryPageProps> = ({ pathname, ca
           </div>
         ) : (
           <>
-          {filteredData?.map((item: any, index: number) => (
+          {filteredData?.map((item: MenuItem, index: number) => (
           <MenuCategoryCard key={index.toString()} item={item} pathname={pathname} />))}
         </>
         )}

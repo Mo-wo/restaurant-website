@@ -5,7 +5,7 @@ export interface MenuItem {
   img: StaticImageData;
   name: string;
   desc: string;
-  price: string;
+  price: number;
   popular: boolean;
   new: boolean;
 }
