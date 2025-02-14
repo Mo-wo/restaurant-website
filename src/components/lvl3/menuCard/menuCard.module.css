@@ -41,6 +41,11 @@
   text-align: center;
 }
 
+.title {
+  background: none !important;
+  color: var(--color-primary);
+}
+
 @media screen and (min-width: 400px) {
   .cardWrapper {
     max-width: 45%;

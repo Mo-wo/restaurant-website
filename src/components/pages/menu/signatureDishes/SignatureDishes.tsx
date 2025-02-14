@@ -41,7 +41,7 @@ export default function SignatureDishes() {
 
     <Section sectionStyle={styles.section} contentContainerStyle={styles.orderSection} color={'white'}>
       <h2 data-aos='zoom-in' style={{marginBottom: 0}}>DON&apos;T JUST BROWSE - INDULGE</h2>
-      <p data-aos='fade-up'>Order online for quick and delicious delivery straight to your door</p>
+      <p data-aos='fade-up' style={{textAlign: 'center'}}>Order online for quick and delicious delivery straight to your door</p>
       <LinkButton href="/menu/deserts" text='Order Now' />
     </Section>
     </>

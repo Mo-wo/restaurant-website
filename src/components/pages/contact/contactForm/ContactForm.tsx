@@ -35,7 +35,7 @@ export default function ContactForm() {
 
       <div className={styles.ctaSection}>
         <h2>DON&apos;T JUST BROWSE - INDULGE</h2>
-        <p>Order online for quick and delicious delivery straight to your door</p>
+        <p style={{textAlign: 'center'}}>Order online for quick and delicious delivery straight to your door</p>
         <LinkButton href='/menu' text={'Order Now'} />
       </div>
     </Section>
