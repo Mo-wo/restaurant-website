@@ -3,11 +3,12 @@ import React, { HTMLAttributes } from 'react';
 import ImageComponent from '@/components/lvl2/image/Image';
 import styles from './menuCategoryCard.module.css';
 import { LinkButton } from '@/components/lvl2/button/Button';
+import { MenuItem } from '@/interfaces/menuInterface';
 
 interface MenuCategoryCardProps {
   cardTextWrapperStyle?: string;
   pathname: string;
-  item: any;
+  item: MenuItem;
 }
 
 export const MenuCategoryCard: React.FC<MenuCategoryCardProps & HTMLAttributes<HTMLDivElement>> = ({

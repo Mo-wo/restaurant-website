@@ -56,24 +56,9 @@ import drink5 from '@/assets/images/menuCategories/drink5.svg';
 import drink6 from '@/assets/images/menuCategories/drink6.svg';
 import drink10 from '@/assets/images/menuCategories/drink10.svg';
 import drink18 from '@/assets/images/menuCategories/drink18.svg';
+import { MenuCategoryData } from '@/interfaces/menuInterface';
 
-export const menuData: Record<
-  string,
-  {
-    heading: string;
-    description: string;
-    totalPages: number;
-    data: {
-      id: string;
-      img: any;
-      name: string;
-      desc: string;
-      price: string;
-      popular: boolean;
-      new: boolean;
-    }[];
-  }
-> = {
+export const menuData: MenuCategoryData = {
   breakfast: {
     heading: 'START YOUR DAY WITH FLAVOR',
     description: 'Enjoy a wholesome breakfast that fuels your morning with a burst of deliciousness',
@@ -637,8 +622,8 @@ export const menuData: Record<
     ],
   },
   'chefs-favourite': {
-    heading: 'A TOUCH OF THE CHEF’S EXPERTISE',
-    description: 'Indulge in our chef’s handpicked creations, expertly crafted for the ultimate dining experience',
+    heading: "A TOUCH OF THE CHEF'S EXPERTISE",
+    description: "Indulge in our chef's handpicked creations, expertly crafted for the ultimate dining experience",
     totalPages: 10,
     data: [
       {

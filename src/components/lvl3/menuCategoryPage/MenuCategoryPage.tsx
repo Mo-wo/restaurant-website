@@ -6,10 +6,11 @@ import { MenuCategoryCard } from '../menuCategoryCard/MenuCategoryCard';
 import { Pagination } from '../pagination/Pagination';
 import styles from './menuCategoryPage.module.css';
 import { ThreeDots } from 'react-loader-spinner'
+import { MenuCategory } from '@/interfaces/menuInterface';
 
 type MenuCategoryPageProps = {
   pathname: string;
-  categoryData: any;
+  categoryData: MenuCategory;
   category: string
 }
 

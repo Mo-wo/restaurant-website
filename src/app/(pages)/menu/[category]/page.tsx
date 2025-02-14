@@ -12,7 +12,11 @@ export default function MenuCategory() {
 
   const categoryData = menuData[category as string];
 
-  if (!categoryData) return <h1>Menu Category not Found</h1>
+  if (!categoryData) return <h1 style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '50vh'}}>Menu Category not Found</h1>
 
   return (
     <>
